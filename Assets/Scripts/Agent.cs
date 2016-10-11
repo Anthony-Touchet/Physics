@@ -4,11 +4,10 @@ using System.Collections;
 public class Agent : MonoBehaviour {
     public int mass;
     public Vector3 force;
+    Vector3 velocity;
 
     // F = mass * velocity
     // velocity = F / mass
-
-    Vector3 velocity;
 
     void FixedUpdate () {
         velocity = force / mass;
