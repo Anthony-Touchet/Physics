@@ -15,16 +15,15 @@ public class Agent : MonoBehaviour {
 
     void FixedUpdate () {
         
-        desiredVelocity = (target.position - transform.position).normalized;
-        steering = Vector3.ClampMagnitude(desiredVelocity - velocity, 1).normalized / mass;
-        velocity += steering;
-        if (velocity.magnitude > 5)
+        desiredVelocity = (target.position - transform.position).normalized;    //Displacement, normilized
+        steering = (desiredVelocity - velocity).normalized / mass;  //Steering Velocity, get direction, bassed on mass.
+        velocity += steering;       //Nudge the direction
+        if (velocity.magnitude > 5)         //Keep speed to avoid jittering
             velocity = velocity.normalized;
     }
 
     void LateUpdate()
     {
-
         transform.position += velocity;    //Add velocity to position. Multiply by delta time to make it smooth.
     }
 }
