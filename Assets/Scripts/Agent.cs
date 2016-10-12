@@ -1,15 +1,61 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Inferances;
+using System;
 
-public class Agent : MonoBehaviour {
-    public int mass;
-    public Vector3 velocity;
-    // Applying a Force
-    // F = mass * velocity
-    // velocity = F / mass
+public class Agent : IBoid{
+    private float m_mass;
+    private Vector3 m_velocity;
+    private Vector3 m_position;
 
-    void LateUpdate()
+    public Agent(float m)
     {
-        transform.position += velocity / mass;    //Add velocity to position. Multiply by delta time to make it smooth.
+        velocity = Vector3.zero;
+        position = Vector3.zero;
+        mass = (mass == 0) ? 1 : mass;
+    }
+
+    public float mass
+    {
+        get
+        {
+            return m_mass;
+        }
+
+        set
+        {
+            m_mass = value;
+        }
+    }
+
+    public Vector3 position
+    {
+        get
+        {
+            return m_position;
+        }
+
+        set
+        {
+            m_position = value;
+        }
+    }
+
+    public Vector3 velocity
+    {
+        get
+        {
+            return m_velocity;
+        }
+
+        set
+        {
+            m_velocity = value;
+        }
+    }
+
+    public void UpdateVelocity()
+    {
+        position += velocity;    //Add velocity to position. Multiply by delta time to make it smooth.
     }
 }

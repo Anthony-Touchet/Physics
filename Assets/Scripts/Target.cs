@@ -8,12 +8,14 @@ public class Target : MonoBehaviour {
     public float maxDistance;
     public int minMass;
     public int maxMass;
+    [Range(.1f, 1.5f)]public float steeringBehavior;
 
     // Use this for initialization
     void Awake () {
+        steeringBehavior = 1;
         for (int i = 0; i < agentNumber; i++)
         {
-            Vector3 pos = new Vector3();
+            Vector3 pos = Vector3.zero;
             pos.x = Random.Range(-maxDistance, maxDistance);
             pos.y = Random.Range(-maxDistance, maxDistance);
             pos.z = Random.Range(-maxDistance, maxDistance);
@@ -22,10 +24,20 @@ public class Target : MonoBehaviour {
 
             SeekingBehavior sb = temp.GetComponent<SeekingBehavior>();
             sb.target = gameObject.transform;
+            sb.steeringFactor = steeringBehavior;
 
-            Agent ag = temp.GetComponent<Agent>();
-            ag.mass = Random.Range(minMass, maxMass);
-            ag.velocity = ag.transform.position - transform.position;
+            MonoBoid mb = temp.GetComponent<MonoBoid>();
+            mb.mass = Random.Range(minMass, maxMass);
+            mb.velocity = Vector3.up;
         } 
 	}
+
+    void Update()
+    {
+        foreach (SeekingBehavior sb in FindObjectsOfType<SeekingBehavior>())
+        {
+            sb.target = gameObject.transform;
+            sb.steeringFactor = steeringBehavior;
+        }
+    }
 }
