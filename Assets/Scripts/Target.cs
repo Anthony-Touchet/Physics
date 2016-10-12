@@ -5,7 +5,9 @@ public class Target : MonoBehaviour {
 
     public GameObject prefab;
     public int agentNumber;
-    public int maxDistance;
+    public float maxDistance;
+    public int minMass;
+    public int maxMass;
 
     // Use this for initialization
     void Awake () {
@@ -17,10 +19,13 @@ public class Target : MonoBehaviour {
             pos.z = Random.Range(-maxDistance, maxDistance);
 
             GameObject temp = Instantiate(prefab, pos, Quaternion.identity) as GameObject;
-            Agent a = temp.GetComponent<Agent>();
-            a.target = gameObject.transform;
-            a.mass = Random.Range(5, 20);
-        }
-        
+
+            SeekingBehavior sb = temp.GetComponent<SeekingBehavior>();
+            sb.target = gameObject.transform;
+
+            Agent ag = temp.GetComponent<Agent>();
+            ag.mass = Random.Range(minMass, maxMass);
+            ag.velocity = ag.transform.position - transform.position;
+        } 
 	}
 }

@@ -9,7 +9,7 @@ public class CameraFollow : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        foreach (Agent a in FindObjectsOfType<Agent>())
+        foreach (GameObject a in GameObject.FindGameObjectsWithTag("Agent"))
         {
             agents.Add(a.transform);
         }
