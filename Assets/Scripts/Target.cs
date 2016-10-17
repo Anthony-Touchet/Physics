@@ -9,9 +9,10 @@ public class Target : MonoBehaviour {
     public int minMass;
     public int maxMass;
     [Range(.1f, 1.5f)]public float steeringBehavior;
+    public float radius;
 
     // Use this for initialization
-    void Awake () {
+    void Start () {
         steeringBehavior = 1;
         for (int i = 0; i < agentNumber; i++)
         {
@@ -22,22 +23,24 @@ public class Target : MonoBehaviour {
 
             GameObject temp = Instantiate(prefab, pos, Quaternion.identity) as GameObject;
 
-            SeekingBehavior sb = temp.GetComponent<SeekingBehavior>();
-            sb.target = gameObject.transform;
-            sb.steeringFactor = steeringBehavior;
+            SeekandArrive sa = temp.GetComponent<SeekandArrive>();
+            sa.target = gameObject.transform;
+            sa.steeringFactor = steeringBehavior;
+            sa.radius = radius;
 
             MonoBoid mb = temp.GetComponent<MonoBoid>();
             mb.mass = Random.Range(minMass, maxMass);
-            mb.velocity = Vector3.up;
+            mb.agent.velocity = Vector3.up;
         } 
 	}
 
     void Update()
     {
-        foreach (SeekingBehavior sb in FindObjectsOfType<SeekingBehavior>())
+        foreach (SeekandArrive sb in FindObjectsOfType<SeekandArrive>())
         {
             sb.target = gameObject.transform;
             sb.steeringFactor = steeringBehavior;
+            sb.radius = radius;
         }
     }
 }

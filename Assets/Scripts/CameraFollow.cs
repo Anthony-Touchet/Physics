@@ -13,7 +13,7 @@ public class CameraFollow : MonoBehaviour {
         {
             agents.Add(a.transform);
         }
-        agents.Add(GameObject.Find("Target").transform);
+        agents.Add(GameObject.FindGameObjectWithTag("Target").transform);
 	}
 	
 	// Update is called once per frame

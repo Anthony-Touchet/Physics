@@ -1,23 +1,26 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SeekingBehavior : MonoBehaviour {
+public class SeekandArrive : MonoBehaviour {
     MonoBoid mB;
     Vector3 desiredVelocity;
     public Transform target;
     Vector3 steering;
     public float steeringFactor;
+    public float radius;
 
     void Start()
     {
         mB = gameObject.GetComponent<MonoBoid>();
     }
 
-    void FixedUpdate () {
+    void FixedUpdate()
+    {
+        float pushBackForceFactor = (target.position - transform.position).magnitude / radius;
+        Vector3 pushBackForce = (target.position - transform.position).normalized * pushBackForceFactor;
+
+        mB.agent.velocity = pushBackForce / mB.agent.mass;
         
-        desiredVelocity = (target.position - transform.position).normalized;    //Displacement, normilized
-        steering = (desiredVelocity - mB.agent.velocity).normalized * steeringFactor;  //Steering Velocity, get direction
-        mB.agent.velocity += steering / mB.agent.mass;       //Nudge the direction
         if (mB.agent.velocity.magnitude > 5)         //Keep speed to avoid jittering
             mB.agent.velocity = mB.agent.velocity.normalized;
     }
