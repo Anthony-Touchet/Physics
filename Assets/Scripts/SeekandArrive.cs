@@ -21,7 +21,7 @@ public class SeekandArrive : MonoBehaviour {
 
         mB.agent.velocity = pushBackForce / mB.agent.mass;
         
-        if (mB.agent.velocity.magnitude > 5)         //Keep speed to avoid jittering
+        if (mB.agent.velocity.magnitude > 3)         //Keep speed to avoid jittering
             mB.agent.velocity = mB.agent.velocity.normalized;
     }
 }

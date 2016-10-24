@@ -16,9 +16,9 @@ public class SeekingBehavior : MonoBehaviour {
     void FixedUpdate () {
         
         desiredVelocity = (target.position - transform.position).normalized;    //Displacement, normilized
-        steering = (desiredVelocity - mB.agent.velocity).normalized * steeringFactor;  //Steering Velocity, get direction
+        steering = (desiredVelocity - mB.agent.velocity).normalized * .1f * steeringFactor;  //Steering Velocity, get direction
         mB.agent.velocity += steering / mB.agent.mass;       //Nudge the direction
-        if (mB.agent.velocity.magnitude > 5)         //Keep speed to avoid jittering
+        if (mB.agent.velocity.magnitude > 3)         //Keep speed to avoid jittering
             mB.agent.velocity = mB.agent.velocity.normalized;
     }
 }

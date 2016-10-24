@@ -10,25 +10,35 @@ public class Target : MonoBehaviour {
     public int maxMass;
     [Range(.1f, 1.5f)]public float steeringBehavior;
     public float radius;
+    public Vector3 pos;
 
     // Use this for initialization
-    void Start () {
-        steeringBehavior = 1;
+    void Awake () {
         for (int i = 0; i < agentNumber; i++)
         {
-            Vector3 pos = Vector3.zero;
             pos.x = Random.Range(-maxDistance, maxDistance);
             pos.y = Random.Range(-maxDistance, maxDistance);
             pos.z = Random.Range(-maxDistance, maxDistance);
 
-            GameObject temp = Instantiate(prefab, pos, Quaternion.identity) as GameObject;
+            GameObject temp = Instantiate(prefab, pos, new Quaternion()) as GameObject;
 
-            SeekandArrive sa = temp.GetComponent<SeekandArrive>();
-            sa.target = gameObject.transform;
-            sa.steeringFactor = steeringBehavior;
-            sa.radius = radius;
+            if (temp.GetComponent<SeekingBehavior>() != null)
+            {
+                SeekingBehavior sa = temp.GetComponent<SeekingBehavior>();
+                sa.target = gameObject.transform;
+                sa.steeringFactor = steeringBehavior;
+            }
+
+            if (temp.GetComponent<SeekandArrive>() != null)
+            {
+                SeekandArrive sa = temp.GetComponent<SeekandArrive>();
+                sa.target = gameObject.transform;
+                sa.steeringFactor = steeringBehavior;
+                sa.radius = radius;
+            }
 
             MonoBoid mb = temp.GetComponent<MonoBoid>();
+            mb.agent.position = pos;
             mb.mass = Random.Range(minMass, maxMass);
             mb.agent.velocity = Vector3.up;
         } 
@@ -41,6 +51,12 @@ public class Target : MonoBehaviour {
             sb.target = gameObject.transform;
             sb.steeringFactor = steeringBehavior;
             sb.radius = radius;
+        }
+
+        foreach (SeekingBehavior sb in FindObjectsOfType<SeekingBehavior>())
+        {
+            sb.target = gameObject.transform;
+            sb.steeringFactor = steeringBehavior;
         }
     }
 }
