@@ -6,7 +6,7 @@ public class BoidController : MonoBehaviour {
     public GameObject boidPrefab;
     public int boidNumber;
     public float maxSpawnDistance;
-    //public float boxBoundries;
+    public float boxBoundries;
     public Transform target;
 
     private List<BoidBehavior> boids;
@@ -14,7 +14,7 @@ public class BoidController : MonoBehaviour {
     [Range(0.1f, 1.0f)]
     public float cohesion;
 
-    [Range(0.1f, 1.0f)]
+    [Range(0.0f, 1.0f)]
     public float dispersion;
 
     [Range(0.0f, 0.35f)]
@@ -47,7 +47,8 @@ public class BoidController : MonoBehaviour {
             Vector3 r1 = CenterOfMass(bb);
             Vector3 r2 = Dispersion(bb);
             Vector3 r3 = Alignment(bb);
-            bb.velocity += r1 + r2 + r3;
+            Vector3 walls = WallBoundries(bb);
+            bb.velocity += r1 + r2 + r3 + walls;
         }
 	}
 
@@ -98,6 +99,28 @@ public class BoidController : MonoBehaviour {
         ClampVector(rule3);
 
         return rule3;
+    }
+
+    private Vector3 WallBoundries(BoidBehavior b)
+    {
+        Vector3 bounds = new Vector3();
+
+        if (b.transform.position.x > boxBoundries)
+            bounds += new Vector3(-5, 0, 0);
+        else if (b.transform.position.x < -boxBoundries)
+            bounds += new Vector3(5, 0, 0);
+
+        if (b.transform.position.y > boxBoundries)
+            bounds += new Vector3(0, -5, 0);
+        else if (b.transform.position.y < -boxBoundries)
+            bounds += new Vector3(0, 5, 0);
+
+        if (b.transform.position.z > boxBoundries)
+            bounds += new Vector3(0, 0, -5);
+        else if (b.transform.position.z < -boxBoundries)
+            bounds += new Vector3(0, 0, 5);
+
+        return bounds;
     }
 
     public void ClampVector(Vector3 vec)
