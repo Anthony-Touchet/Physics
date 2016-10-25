@@ -9,22 +9,25 @@ public class BoidController : MonoBehaviour {
     public float boxBoundries;
     public Transform target;
 
+    public float minMass;
+    public float maxMass;
+
     private List<BoidBehavior> boids;
 
-    [Range(0.1f, 1.0f)]
+    [Range(0.0f, 1.0f)]
     public float cohesion;
 
     [Range(0.0f, 1.0f)]
     public float dispersion;
 
-    [Range(0.0f, 0.35f)]
+    [Range(0.0f, 1.0f)]
     public float alignment;
 
     private void Awake()
     {
         boids = new List<BoidBehavior>();
         Vector3 pos = Vector3.zero;
-        for (int i = 0; i < boidNumber; i++)
+        for (int i = 0; i < boidNumber; i++)    //Spawn and add to list
         {
             pos.x = Random.Range(-maxSpawnDistance, maxSpawnDistance);
             pos.y = Random.Range(-maxSpawnDistance, maxSpawnDistance);
@@ -34,21 +37,28 @@ public class BoidController : MonoBehaviour {
 
             BoidBehavior bb = temp.GetComponent<BoidBehavior>();
             bb.velocity = bb.transform.position.normalized;
+            bb.mass = Random.Range(minMass, maxMass);
 
             bb.transform.parent = transform;
 
             boids.Add(bb);
+        }
+
+        foreach(BoidBehavior bb in FindObjectsOfType<BoidBehavior>())
+        {
+            if (boids.Contains(bb) == false)
+                boids.Add(bb);
         }
     }
 
     private void FixedUpdate () {
 	    foreach(BoidBehavior bb in boids)
         {
-            Vector3 r1 = CenterOfMass(bb);
-            Vector3 r2 = Dispersion(bb);
-            Vector3 r3 = Alignment(bb);
+            Vector3 r1 = CenterOfMass(bb) * cohesion;
+            Vector3 r2 = Dispersion(bb) * dispersion;
+            Vector3 r3 = Alignment(bb) * alignment;
             Vector3 walls = WallBoundries(bb);
-            bb.velocity += r1 + r2 + r3 + walls;
+            bb.velocity += (r1 + r2 + r3 + walls) / bb.mass;
         }
 	}
 
@@ -56,15 +66,20 @@ public class BoidController : MonoBehaviour {
     {
         //Rule 1: center of mass
         Vector3 percCenter = Vector3.zero;
+        float totalMass = 0;
         foreach (BoidBehavior bj in boids)
         {
             if(bj != b)
-                percCenter += bj.transform.position;
+            {
+                percCenter += bj.transform.position * bj.mass;
+                totalMass += bj.mass;
+            }
+                
         }
 
-        percCenter = percCenter / (boids.Count - 1); //Divide the Precived Center by how many other boids there are.
+        percCenter = percCenter / totalMass /*/ (boids.Count - 1)*/; //Divide the Precived Center by how many other boids there are.
 
-        return (percCenter - b.transform.position).normalized * cohesion;   //Set rule one. MUST BE NORMALIZED
+        return (percCenter - b.transform.position).normalized ;   //Set rule one. MUST BE NORMALIZED
     }
 
     private Vector3 Dispersion(BoidBehavior b)
@@ -73,7 +88,7 @@ public class BoidController : MonoBehaviour {
         Vector3 avoid = Vector3.zero;
         foreach (BoidBehavior bj in boids)
         {
-            if ((bj.transform.position - b.transform.position).magnitude <= 100 * dispersion && bj != b)
+            if ((bj.transform.position - b.transform.position).magnitude <= 50  && bj != b)
             {
                 avoid -= bj.transform.position - b.transform.position;
             }
@@ -94,7 +109,7 @@ public class BoidController : MonoBehaviour {
 
         percVelocity = percVelocity / (boids.Count - 1);
 
-        Vector3 rule3 = (percVelocity - b.velocity).normalized * alignment;
+        Vector3 rule3 = (percVelocity - b.velocity).normalized ;
 
         ClampVector(rule3);
 
