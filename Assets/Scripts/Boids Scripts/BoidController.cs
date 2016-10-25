@@ -190,22 +190,25 @@ public class BoidController : MonoBehaviour {
     //Function that caculates a tendecy for a boid to move in a certain direction
     private Vector3 TendTowardsPlace(BoidBehavior bb)
     {
-        if (tendency >= 0)
+        if (tendency > 0)
         {
-            SetColor(Color.black, bb);
+            if(GetColor(bb) != Color.white)
+                SetColor(Color.white, bb);
             return (target.position - bb.transform.position).normalized;
         }
             
 
         else if (tendency < 0 && (target.position - bb.transform.position).magnitude < targetRange)
         {
-            SetColor(Color.yellow, bb);
+            if (GetColor(bb) != Color.yellow)
+                SetColor(Color.yellow, bb);
             return (target.position - bb.transform.position).normalized;
         }
 
         else
         {
-            SetColor(Color.black, bb);
+            if (GetColor(bb) != Color.black)
+                SetColor(Color.black, bb);
             return Vector3.zero;
         }
             
@@ -214,5 +217,10 @@ public class BoidController : MonoBehaviour {
     private void SetColor(Color c, BoidBehavior bb)
     {
         bb.transform.GetChild(1).GetComponent<MeshRenderer>().material.color = c;
+    }
+
+    private Color GetColor(BoidBehavior bb)
+    {
+        return bb.transform.GetChild(1).GetComponent<MeshRenderer>().material.color;
     }
 }
