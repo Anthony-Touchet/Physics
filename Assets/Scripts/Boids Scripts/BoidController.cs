@@ -67,7 +67,7 @@ public class BoidController : MonoBehaviour {
 	    foreach(BoidBehavior bb in boids)
         {
             Vector3 r1 = Cohesion(bb) * cohesion;
-            Vector3 r2 = Dispersion(bb) * dispersion;
+            Vector3 r2 = Dispersion(bb);
             Vector3 r3 = Alignment(bb) * alignment;
             Vector3 walls = WallBoundries(bb);
             Vector3 tendTowards = TendTowardsPlace(bb) * tendency;
@@ -104,7 +104,7 @@ public class BoidController : MonoBehaviour {
         Vector3 avoid = Vector3.zero;
         foreach (BoidBehavior bj in boids)
         {
-            if ((bj.transform.position - b.transform.position).magnitude <= 20 && bj != b)
+            if ((bj.transform.position - b.transform.position).magnitude <= 25 * dispersion && bj != b)
             {
                 avoid -= bj.transform.position - b.transform.position;
             }
@@ -127,8 +127,6 @@ public class BoidController : MonoBehaviour {
         percVelocity = percVelocity / (boids.Count - 1);
 
         Vector3 rule3 = (percVelocity - b.velocity).normalized;
-
-        //ClampVector(rule3);
 
         return rule3;
     }
@@ -192,8 +190,8 @@ public class BoidController : MonoBehaviour {
     {
         if (tendency > 0)
         {
-            if(GetColor(bb) != Color.white)
-                SetColor(Color.white, bb);
+            if(GetColor(bb) != Color.cyan)
+                SetColor(Color.cyan, bb);
             return (target.position - bb.transform.position).normalized;
         }
             
@@ -208,7 +206,7 @@ public class BoidController : MonoBehaviour {
         else
         {
             if (GetColor(bb) != Color.black)
-                SetColor(Color.black, bb);
+                SetColor(new Color(0, 213, 255, 255), bb);
             return Vector3.zero;
         }
             

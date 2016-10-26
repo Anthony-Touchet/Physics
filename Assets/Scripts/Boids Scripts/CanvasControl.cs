@@ -50,5 +50,19 @@ public class CanvasControl : MonoBehaviour {
             dispersion.value = 0.3f;
             alignment.value = 0f;
         }
+
+        else if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            cohesion.value = 0.5f;
+            dispersion.value = 0.5f;
+            alignment.value = 1f;
+        }
+
+        else if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            cohesion.value = 0.25f;
+            dispersion.value = 0.75f;
+            alignment.value = 0f;
+        }
     }
 }
