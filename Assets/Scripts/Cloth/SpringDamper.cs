@@ -13,14 +13,14 @@ public class SpringDamper
 
     public Vector3 P1force;
     public Vector3 P2force;
+
     public SpringDamper()
     {
 
     }
+
     public SpringDamper(Particle one, Particle two, float sC, float dF, float rL)
     {
-        if (one == null)
-            Debug.Break();
         P1 = one;
         P2 = two;
         springConst = sC;
@@ -37,12 +37,12 @@ public class SpringDamper
         float p11D = Vector3.Dot(e, P1.velocity);   //P1 1D velocity
         float p21D = Vector3.Dot(e, P2.velocity);   //P2 1D velocity
 
-        float springDampingForce = -(springConst) * (restLength - dist.magnitude) - dampingFactor * (p11D - p21D);
+        float Fs = -springConst * (restLength - dist.magnitude);
+        float fd = -dampingFactor * (p11D - p21D);
 
-        P1force = springDampingForce * e;
-        P2force = -(P1force);
+        Vector3 springDampingForce =  (Fs + fd) * e;
 
-        P1.steering += P1force;
-        P2.steering += P2force;
+        P1.AddForce(springDampingForce);
+        P2.AddForce(-springDampingForce);
     }
 }
