@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class VariableControl : MonoBehaviour {
 
     List<MonoParticle> particleList;
-    List<SpringDamper> springDampenerList;
+    List<SpringDamper> springDamperList;
     List<Triangle> triangleList;
     public GameObject particlePrefab;
 
@@ -13,6 +13,7 @@ public class VariableControl : MonoBehaviour {
     public int height;
     public float padding;
 
+    public float mass;
     public float gravity;
     [Range(0f, 100f)]
     public float springConst;
@@ -20,7 +21,7 @@ public class VariableControl : MonoBehaviour {
     public float dampingFactor;
     [Range(0f, 25f)]public float restLength;
 
-    [Range(0.01f, 3f)]
+    [Range(0.01f, 10f)]
     public float windStrength;
 
     public bool wind;
@@ -31,7 +32,7 @@ public class VariableControl : MonoBehaviour {
     // Use this for initialization
     void Awake() {
         particleList = new List<MonoParticle>();    //Create New list
-        springDampenerList = new List<SpringDamper>();
+        springDamperList = new List<SpringDamper>();
         triangleList = new List<Triangle>();
 
         SpawnParticles(width, height);          //Spawn in the particles
@@ -41,41 +42,52 @@ public class VariableControl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-        List<SpringDamper> temp = new List<SpringDamper>();
-        
-        foreach(SpringDamper sd in springDampenerList)  //temp list for spring dampers
+        List<SpringDamper> tempSDList = new List<SpringDamper>();
+        List<Triangle> tempTriList = new List<Triangle>();
+
+        foreach (SpringDamper sd in springDamperList)  //temp list for spring dampers
         {
-            temp.Add(sd);
+            tempSDList.Add(sd);
         }
 
-	   foreach (MonoParticle mp in particleList)    //Apply Gravity
+        foreach (Triangle t in triangleList)  //temp list for Triangles
         {
-            mp.particle.force = Vector3.zero;
-            mp.particle.force = (gravity * Vector3.down) * mp.particle.mass;
+            tempTriList.Add(t);
         }
 
-        foreach(SpringDamper sd in temp)  //Calculate force of the springs
+        foreach (MonoParticle mp in particleList)    //Apply Gravity
         {
-                     
+                mp.particle.force = Vector3.zero;
+                mp.particle.force = (gravity * Vector3.down) * mp.particle.mass;        
+        }
+
+        foreach(SpringDamper sd in tempSDList)  //Calculate force of the springs
+        {                   
             sd.dampingFactor = dampingFactor;
             sd.springConst = springConst;
             sd.restLength = restLength;
             sd.ComputeForce();
 
-            if (sd.BreakHappens(breakFactor))
+            if (sd.BreakHappens(breakFactor) || (sd.P1 == null || sd.P2 == null))
             {
-                springDampenerList.Remove(sd);
+                springDamperList.Remove(sd);
             }
         }
 
-        if (wind)
-        {
-            foreach (Triangle t in triangleList)     //Calculate triangle forces
-            {
-                 t.CalculateAeroFoce(Vector3.forward * windStrength);               
-            }
-        }
         
+        foreach (Triangle t in tempTriList)     //Calculate triangle forces
+        {         
+            if (wind)
+            {
+                if (!springDamperList.Contains(t.p1P2) || !springDamperList.Contains(t.p2P3)
+                    || !springDamperList.Contains(t.p3P1))
+                {
+                    triangleList.Remove(t);
+                }
+                else
+                    t.CalculateAeroFoce(Vector3.forward * windStrength);
+            }                                
+        }      
 
         foreach (MonoParticle mp in particleList)       //Move Particles
         {
@@ -98,7 +110,7 @@ public class VariableControl : MonoBehaviour {
             for(int j = 0; j < width; j++, count++)
             {
                 GameObject temp = Instantiate(particlePrefab, new Vector3(xPosition, yPosition, 0), new Quaternion()) as GameObject;
-                temp.GetComponent<MonoParticle>().particle = new Particle(new Vector3(xPosition, yPosition, 0), new Vector3(0,0,0), 1);
+                temp.GetComponent<MonoParticle>().particle = new Particle(new Vector3(xPosition, yPosition, 0), new Vector3(0,0,0), mass);
                 particleList.Add(temp.GetComponent<MonoParticle>());
                 temp.name = "Point " + (count).ToString();
                 xPosition += 1f + padding;
@@ -133,21 +145,21 @@ public class VariableControl : MonoBehaviour {
             {
                 p.particle.neighbors.Add(particleList[index + 1].particle);
                 SpringDamper sd = new SpringDamper(p.particle, particleList[index + 1].particle, springConst, dampingFactor, restLength);
-                springDampenerList.Add(sd);
+                springDamperList.Add(sd);
             }
 
             if (index + width < particleList.Count)                                                                            //immediate up
             {
                 p.particle.neighbors.Add(particleList[index + width].particle);
                 SpringDamper sd = new SpringDamper(p.particle, particleList[index + width].particle, springConst, dampingFactor, restLength);
-                springDampenerList.Add(sd);
+                springDamperList.Add(sd);
             }
 
             if (index + width - 1 < particleList.Count && index - 1 >= 0 && (index - 1) % width < index % width)                //Top left
             {
                 p.particle.neighbors.Add(particleList[index + width - 1].particle);
                 SpringDamper sd = new SpringDamper(p.particle, particleList[index + width - 1].particle, springConst, dampingFactor, restLength);
-                springDampenerList.Add(sd);
+                springDamperList.Add(sd);
             }
 
 
@@ -155,7 +167,7 @@ public class VariableControl : MonoBehaviour {
             {
                 p.particle.neighbors.Add(particleList[index + width + 1].particle);
                 SpringDamper sd = new SpringDamper(p.particle, particleList[index + width + 1].particle, springConst, dampingFactor, restLength);
-                springDampenerList.Add(sd);
+                springDamperList.Add(sd);
             }
         }
     }
@@ -171,6 +183,17 @@ public class VariableControl : MonoBehaviour {
             if (index % width != width - 1 && index + width < particleList.Count)
             {
                 t = new Triangle(particleList[index], particleList[index + 1], particleList[index + width]);
+                foreach (SpringDamper sd in springDamperList)
+                {
+                    if ((sd.P1 == t.p1 && sd.P2 == t.p2) || (sd.P1 == t.p2 && sd.P2 == t.p1))
+                        t.p1P2 = sd;
+
+                    else if ((sd.P1 == t.p2 && sd.P2 == t.p3) || (sd.P1 == t.p3 && sd.P2 == t.p2))
+                        t.p2P3 = sd;
+
+                    else if ((sd.P1 == t.p3 && sd.P2 == t.p1) || (sd.P1 == t.p1 && sd.P2 == t.p3))
+                        t.p3P1 = sd;
+                }
                 triangleList.Add(t);
             }
         }

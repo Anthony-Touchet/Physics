@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
 
 public class Triangle{
 
@@ -13,6 +13,7 @@ public class Triangle{
     public float windCoeficent = 1f;
 
     public Particle p1, p2, p3;     //All the particles.
+    public SpringDamper p1P2, p2P3, p3P1;
 
     public Triangle()
     {
@@ -34,8 +35,7 @@ public class Triangle{
     }
 
     // Update is called once per frame
-    public void CalculateAeroFoce (Vector3 vAir) {
-
+    public bool CalculateAeroFoce (Vector3 vAir) {
         Vector3 vSurface = ((p1.velocity + p2.velocity + p3.velocity) / 3);
         v = vSurface - vAir;
         n = Vector3.Cross((p2.position - p1.position), (p3.position - p1.position)) / 
@@ -49,5 +49,6 @@ public class Triangle{
         p1.AddForce((Faero / 3));
         p2.AddForce((Faero / 3));
         p3.AddForce((Faero / 3));
+        return true;
     }
 }
