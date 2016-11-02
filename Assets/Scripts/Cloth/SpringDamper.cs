@@ -45,4 +45,18 @@ public class SpringDamper
         P1.AddForce(springDampingForce);
         P2.AddForce(-springDampingForce);
     }
+
+    public bool BreakHappens(float breakMultiplyer)
+    {
+        if ((P2.position - P1.position).magnitude > restLength * breakMultiplyer)
+        {
+            if (P2.neighbors.Contains(P1))
+                P2.neighbors.Remove(P1);
+            if (P1.neighbors.Contains(P2))
+                P1.neighbors.Remove(P2);
+            return true;
+        }
+            
+        return false;
+    }
 }

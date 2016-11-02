@@ -6,13 +6,12 @@ public class MonoParticle : MonoBehaviour {
 
     public Particle particle;
     public bool anchor;
-    public List<MonoParticle> neighbors;	
 
     void LateUpdate()
     {
-        foreach (MonoParticle mp in neighbors)
+        foreach (Particle mp in particle.neighbors)
         {
-            Debug.DrawLine(transform.position, mp.transform.position, Color.red);
+            Debug.DrawLine(transform.position, mp.position, Color.red);
         }
     }
 }

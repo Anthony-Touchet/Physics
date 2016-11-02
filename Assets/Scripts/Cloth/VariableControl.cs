@@ -20,11 +20,13 @@ public class VariableControl : MonoBehaviour {
     public float dampingFactor;
     [Range(0f, 25f)]public float restLength;
 
-    [Range(0f, 3f)]
+    [Range(0.01f, 3f)]
     public float windStrength;
 
     public bool wind;
     int windRowCount;
+
+    public float breakFactor;
 
     // Use this for initialization
     void Awake() {
@@ -39,29 +41,38 @@ public class VariableControl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+        List<SpringDamper> temp = new List<SpringDamper>();
+        
+        foreach(SpringDamper sd in springDampenerList)  //temp list for spring dampers
+        {
+            temp.Add(sd);
+        }
+
 	   foreach (MonoParticle mp in particleList)    //Apply Gravity
         {
             mp.particle.force = Vector3.zero;
             mp.particle.force = (gravity * Vector3.down) * mp.particle.mass;
         }
 
-        foreach(SpringDamper sd in springDampenerList)  //Calculate force of the springs
+        foreach(SpringDamper sd in temp)  //Calculate force of the springs
         {
+                     
             sd.dampingFactor = dampingFactor;
             sd.springConst = springConst;
             sd.restLength = restLength;
             sd.ComputeForce();
+
+            if (sd.BreakHappens(breakFactor))
+            {
+                springDampenerList.Remove(sd);
+            }
         }
 
         if (wind)
         {
             foreach (Triangle t in triangleList)     //Calculate triangle forces
             {
-                int tWidth = width - 2;
-
-
-
-                t.CalculateAeroFoce(Vector3.forward * windStrength);               
+                 t.CalculateAeroFoce(Vector3.forward * windStrength);               
             }
         }
         
@@ -98,6 +109,9 @@ public class VariableControl : MonoBehaviour {
 
         particleList[particleList.Count - 1].anchor = true;
         particleList[particleList.Count - width].anchor = true;
+
+        particleList[0].anchor = true;
+        particleList[width - 1].anchor = true;
     }
 
     void SetSpringDampers()
@@ -105,7 +119,7 @@ public class VariableControl : MonoBehaviour {
         foreach (MonoParticle p in particleList)
         {
             int index = FindIndex(particleList, p);
-            p.neighbors = new List<MonoParticle>();
+            p.particle.neighbors = new List<Particle>();
 
             //if (index != particleList.Count - 1)
             //{
@@ -117,21 +131,21 @@ public class VariableControl : MonoBehaviour {
             //Find and set neighbors
             if ((index + 1) % width > index % width)                                                                            //immediate right
             {
-                p.neighbors.Add(particleList[index + 1]);
+                p.particle.neighbors.Add(particleList[index + 1].particle);
                 SpringDamper sd = new SpringDamper(p.particle, particleList[index + 1].particle, springConst, dampingFactor, restLength);
                 springDampenerList.Add(sd);
             }
 
             if (index + width < particleList.Count)                                                                            //immediate up
             {
-                p.neighbors.Add(particleList[index + width]);
+                p.particle.neighbors.Add(particleList[index + width].particle);
                 SpringDamper sd = new SpringDamper(p.particle, particleList[index + width].particle, springConst, dampingFactor, restLength);
                 springDampenerList.Add(sd);
             }
 
             if (index + width - 1 < particleList.Count && index - 1 >= 0 && (index - 1) % width < index % width)                //Top left
             {
-                p.neighbors.Add(particleList[index + width - 1]);
+                p.particle.neighbors.Add(particleList[index + width - 1].particle);
                 SpringDamper sd = new SpringDamper(p.particle, particleList[index + width - 1].particle, springConst, dampingFactor, restLength);
                 springDampenerList.Add(sd);
             }
@@ -139,7 +153,7 @@ public class VariableControl : MonoBehaviour {
 
             if (index + width + 1 < particleList.Count && (index + 1) % width > index % width)                                 //Top right
             {
-                p.neighbors.Add(particleList[index + width + 1]);
+                p.particle.neighbors.Add(particleList[index + width + 1].particle);
                 SpringDamper sd = new SpringDamper(p.particle, particleList[index + width + 1].particle, springConst, dampingFactor, restLength);
                 springDampenerList.Add(sd);
             }

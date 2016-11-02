@@ -10,6 +10,8 @@ public class Particle{
     public Vector3 position;
     public Vector3 acceleration;
 
+    public List<Particle> neighbors;
+
     public Particle()
     {
 
