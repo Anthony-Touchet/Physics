@@ -171,13 +171,6 @@ public class VariableControl : MonoBehaviour {
             int index = FindIndex(particleList, p);
             p.particle.neighbors = new List<Particle>();
 
-            //if (index != particleList.Count - 1)
-            //{
-            //    p.neighbors.Add(particleList[index + 1]);
-            //    SpringDamper sd = new SpringDamper(p.particle, particleList[index + 1].particle, springConst, dampingFactor, restLength);
-            //    springDampenerList.Add(sd);
-            //}
-
             //Find and set neighbors
             if ((index + 1) % width > index % width)                                                                            //immediate right
             {
