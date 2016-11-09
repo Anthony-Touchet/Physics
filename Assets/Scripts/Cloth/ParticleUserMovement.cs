@@ -23,7 +23,12 @@ public class ParticleUserMovement : MonoBehaviour {
 
     void LateUpdate()
     {
-        if (Input.GetMouseButton(1) && current != null)
+        if (Input.GetMouseButtonDown(1) && ShootRay().GetComponent<MonoParticle>() != null)
+        {
+            current = ShootRay();            
+        }
+
+        if (Input.GetMouseButton(1))
         {
             Vector3 mouse = Input.mousePosition;
             mouse.z = 35f;
@@ -31,6 +36,7 @@ public class ParticleUserMovement : MonoBehaviour {
             worldPos.z = current.transform.position.z;
             current.transform.position = worldPos;
         }
+
     }
 
     public GameObject ShootRay()

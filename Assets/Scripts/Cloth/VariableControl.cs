@@ -110,10 +110,31 @@ public class VariableControl : MonoBehaviour {
 
         foreach (MonoParticle mp in particleList)       //Move Particles
         {
-            if (Camera.main.WorldToScreenPoint(mp.particle.position).y <= 10f)
+            if (Camera.main.WorldToScreenPoint(mp.particle.position).y <= 10f)  //Floor
             {
                 if (mp.particle.force.y < 0f)
                     mp.particle.force.y = 0;
+                mp.particle.velocity = -mp.particle.velocity * .65f;
+            }
+
+            if (Camera.main.WorldToScreenPoint(mp.particle.position).y > Screen.height - 10f)  //Floor
+            {
+                if (mp.particle.force.y > 0f)
+                    mp.particle.force.y = 0;
+                mp.particle.velocity = -mp.particle.velocity;
+            }
+
+            if (Camera.main.WorldToScreenPoint(mp.particle.position).x < 10f)    //Left Wall
+            {
+                if (mp.particle.force.x < 0f)
+                    mp.particle.force.x = 0;
+                mp.particle.velocity = -mp.particle.velocity * .65f;
+            }
+
+            if (Camera.main.WorldToScreenPoint(mp.particle.position).x > Screen.width - 10f)    //Left Wall
+            {
+                if (mp.particle.force.x > 0f)
+                    mp.particle.force.x = 0;
                 mp.particle.velocity = -mp.particle.velocity * .65f;
             }
 
