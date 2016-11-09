@@ -32,7 +32,6 @@ public class VariableControl : MonoBehaviour {
     public float windStrength;
 
     public bool wind;
-    int windRowCount;
 
     [Range(0.01f, 10f)]
     public float breakFactor;
@@ -75,8 +74,8 @@ public class VariableControl : MonoBehaviour {
 
         foreach (MonoParticle mp in particleList)    //Apply Gravity
         {
-                mp.particle.force = Vector3.zero;
-                mp.particle.force = (gravity * Vector3.down) * mp.particle.mass;        
+            mp.particle.force = Vector3.zero;
+            mp.particle.force = (gravity * Vector3.down) * mp.particle.mass;
         }
 
         foreach(SpringDamper sd in tempSDList)  //Calculate force of the springs
@@ -111,6 +110,13 @@ public class VariableControl : MonoBehaviour {
 
         foreach (MonoParticle mp in particleList)       //Move Particles
         {
+            if (Camera.main.WorldToScreenPoint(mp.particle.position).y <= 10f)
+            {
+                if (mp.particle.force.y < 0f)
+                    mp.particle.force.y = 0;
+                mp.particle.velocity = -mp.particle.velocity * .65f;
+            }
+
             if (mp.anchor == false)
                 mp.transform.position = mp.particle.UpdateParticle();
 

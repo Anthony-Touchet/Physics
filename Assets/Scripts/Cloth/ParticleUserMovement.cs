@@ -7,8 +7,6 @@ public class ParticleUserMovement : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-        
-
         if (Input.GetMouseButtonDown(0))
         {
             if(ShootRay() != null && ShootRay().GetComponent<MonoParticle>() != null)
@@ -25,7 +23,7 @@ public class ParticleUserMovement : MonoBehaviour {
 
     void LateUpdate()
     {
-        if (Input.GetMouseButton(0) && current != null)
+        if (Input.GetMouseButton(1) && current != null)
         {
             Vector3 mouse = Input.mousePosition;
             mouse.z = 35f;
