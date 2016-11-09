@@ -4,6 +4,7 @@ using System.Collections;
 public class ParticleUserMovement : MonoBehaviour {
 
     GameObject current = null;
+    public float dragSpeed;
 
 	// Update is called once per frame
 	void Update () {
@@ -21,19 +22,33 @@ public class ParticleUserMovement : MonoBehaviour {
         }
 	}
 
-    void LateUpdate()
+    public void LateUpdate()
     {
         if (Input.GetMouseButtonDown(1) && ShootRay().GetComponent<MonoParticle>() != null)
         {
             current = ShootRay();            
         }
 
-        if (Input.GetMouseButton(1))
+        if (Input.GetMouseButton(1) && current != null)
         {
+            current.GetComponent<MonoParticle>().particle.force = Vector3.zero;
+            current.GetComponent<MonoParticle>().particle.velocity = Vector3.zero;
+
             Vector3 mouse = Input.mousePosition;
             mouse.z = 35f;
             Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouse);
             worldPos.z = current.transform.position.z;
+
+            ////Clamp Drag Speed
+            //Vector3 direct = worldPos - current.GetComponent<MonoParticle>().particle.position;
+
+            //if((worldPos - current.transform.position).magnitude > 5f)
+            //{
+            //    current.GetComponent<MonoParticle>().particle.position += direct * dragSpeed;
+            //    current.transform.position += direct * dragSpeed;
+            //}
+
+            current.GetComponent<MonoParticle>().particle.position = worldPos;
             current.transform.position = worldPos;
         }
 

@@ -117,18 +117,18 @@ public class VariableControl : MonoBehaviour {
                 mp.particle.velocity = -mp.particle.velocity * .65f;
             }
 
-            if (Camera.main.WorldToScreenPoint(mp.particle.position).y > Screen.height - 10f)  //Floor
+            if (Camera.main.WorldToScreenPoint(mp.particle.position).y > Screen.height - 10f)  //Ceiling
             {
                 if (mp.particle.force.y > 0f)
                     mp.particle.force.y = 0;
-                mp.particle.velocity = -mp.particle.velocity;
+                mp.particle.velocity = -mp.particle.velocity * .65f;
             }
 
             if (Camera.main.WorldToScreenPoint(mp.particle.position).x < 10f)    //Left Wall
             {
                 if (mp.particle.force.x < 0f)
                     mp.particle.force.x = 0;
-                mp.particle.velocity = -mp.particle.velocity * .65f;
+                mp.particle.velocity = -mp.particle.velocity;
             }
 
             if (Camera.main.WorldToScreenPoint(mp.particle.position).x > Screen.width - 10f)    //Left Wall
@@ -144,6 +144,7 @@ public class VariableControl : MonoBehaviour {
             else           //Is Anchor
                 mp.particle.position = mp.transform.position;
         }
+
     }
 
     void LateUpdate()
@@ -161,6 +162,11 @@ public class VariableControl : MonoBehaviour {
                 LineRenderer lr = tempSDList[i].GetComponent<LineRenderer>();
                 lr.SetPosition(0, springDamperList[i].P1.position);
                 lr.SetPosition(1, springDamperList[i].P2.position);
+
+                float tension = (springDamperList[i].P2.position - springDamperList[i].P1.position).magnitude;
+                Color colorFraction = Color.red / 2;
+
+                lr.material.color = Color.red * tension * 2 /*+ Color.white / tension*/;
             }          
         }
     }
