@@ -11,22 +11,28 @@ public class ParticleUserMovement : MonoBehaviour {
 
         if (Input.GetMouseButtonDown(0))
         {
-            if(current != null)
+            if(ShootRay() != null && ShootRay().GetComponent<MonoParticle>() != null)
             {
-                current.GetComponent<MonoParticle>().anchor = false;
+                current = ShootRay();
+                current.GetComponent<MonoParticle>().anchor = (current.GetComponent<MonoParticle>().anchor == true) ? false : true;
             }
-
-            if(ShootRay() != null)
+            else
             {
-                Debug.Log(ShootRay().name);
+                current = null;
             }
         }
 	}
 
-    void FixedUpdate()
+    void LateUpdate()
     {
-        if(current != null)
-            current.transform.position = new Vector3(Input.mousePosition.x, Input.mousePosition.y, current.transform.position.z);
+        if (Input.GetMouseButton(0) && current != null)
+        {
+            Vector3 mouse = Input.mousePosition;
+            mouse.z = 35f;
+            Vector3 worldPos = Camera.main.ScreenToWorldPoint(mouse);
+            worldPos.z = current.transform.position.z;
+            current.transform.position = worldPos;
+        }
     }
 
     public GameObject ShootRay()

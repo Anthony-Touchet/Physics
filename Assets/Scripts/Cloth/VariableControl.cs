@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -292,5 +293,10 @@ public class VariableControl : MonoBehaviour {
         lr.materials[0] = lineMaterial;
         lr.SetWidth(.1f, .1f);
         return go;
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
