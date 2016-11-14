@@ -104,7 +104,7 @@ public class VariableControl : MonoBehaviour {
                     triangleList.Remove(t);
                 }
                 else
-                    t.CalculateAeroFoce(Vector3.forward * windStrength);
+                    t.CalculateAeroForce(Vector3.forward * windStrength);
             }                                
         }      
 

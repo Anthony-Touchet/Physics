@@ -27,15 +27,8 @@ public class Triangle{
         p3 = mp3.particle;
     }
 
-    public Triangle(Particle mp1, Particle mp2, Particle mp3)
-    {
-        p1 = mp1;
-        p2 = mp2;
-        p3 = mp3;
-    }
-
     // Update is called once per frame
-    public bool CalculateAeroFoce (Vector3 vAir) {
+    public bool CalculateAeroForce (Vector3 vAir) {
         Vector3 vSurface = ((p1.velocity + p2.velocity + p3.velocity) / 3);
         v = vSurface - vAir;
         n = Vector3.Cross((p2.position - p1.position), (p3.position - p1.position)) / 

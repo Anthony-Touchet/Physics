@@ -11,9 +11,6 @@ public class SpringDamper
     public Particle P1, P2;
     //Hooke's Law F = -kX
 
-    public Vector3 P1force;
-    public Vector3 P2force;
-
     public SpringDamper()
     {
 
