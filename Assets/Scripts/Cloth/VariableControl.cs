@@ -164,9 +164,9 @@ public class VariableControl : MonoBehaviour {
                 lr.SetPosition(1, springDamperList[i].P2.position);
 
                 float tension = (springDamperList[i].P2.position - springDamperList[i].P1.position).magnitude;
-                Color colorFraction = Color.red / 2;
+                Color colorFraction = Color.red / 3.25f;
 
-                lr.material.color = Color.red * tension * 2 /*+ Color.white / tension*/;
+                lr.material.color = colorFraction * tension /*+ Color.white / tension*/;
             }          
         }
     }
