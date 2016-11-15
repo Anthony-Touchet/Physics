@@ -167,6 +167,7 @@ public class VariableControl : MonoBehaviour {
                 Color colorFraction = Color.red / 3.25f;
 
                 lr.material.color = colorFraction * tension /*+ Color.white / tension*/;
+                lr.SetColors(lr.material.color, lr.material.color);
             }          
         }
     }
