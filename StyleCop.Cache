@@ -1,0 +1,2489 @@
+<stylecopresultscache>
+  <version>12</version>
+  <project key="2047522319">
+    <configuration>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_4_1;UNITY_5_4;UNITY_5;ENABLE_NEW_BUGREPORTER;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EDITOR_RETINA;ENABLE_RETINA_GUISTYLES;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_SPRITE_POLYGON;ENABLE_TERRAIN;ENABLE_UNET;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;INCLUDE_DIRECTX12;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_LOCALIZATION;ENABLE_ANDROID_ATLAS_ETC1_COMPRESSION;ENABLE_EDITOR_TESTS_RUNNER;UNITY_WEBGL;UNITY_WEBGL_API;UNITY_DISABLE_WEB_VERIFICATION;ENABLE_TEXTUREID_MAP;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_IL2CPP;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;UNITY_TEAM_LICENSE;ENABLE_VSTU;UNITY_PRO_LICENSE</configuration>
+  </project>
+  <sourcecode name="VariableControl.cs" parser="StyleCop.CSharp.CsParser">
+    <timestamps>
+      <styleCop>2016/11/09 21:13:02.000</styleCop>
+      <settingsFile>2016/10/21 10:13:26.000</settingsFile>
+      <sourceFile>2016/11/30 10:09:20.324</sourceFile>
+      <parser>2016/11/09 21:13:02.000</parser>
+      <StyleCop.CSharp.DocumentationRules>2016/11/09 21:13:02.000</StyleCop.CSharp.DocumentationRules>
+      <StyleCop.CSharp.DocumentationRules.FilesHashCode>-277821146</StyleCop.CSharp.DocumentationRules.FilesHashCode>
+      <StyleCop.CSharp.LayoutRules>2016/11/09 21:13:02.000</StyleCop.CSharp.LayoutRules>
+      <StyleCop.CSharp.LayoutRules.FilesHashCode>0</StyleCop.CSharp.LayoutRules.FilesHashCode>
+      <StyleCop.CSharp.MaintainabilityRules>2016/11/09 21:13:02.000</StyleCop.CSharp.MaintainabilityRules>
+      <StyleCop.CSharp.MaintainabilityRules.FilesHashCode>0</StyleCop.CSharp.MaintainabilityRules.FilesHashCode>
+      <StyleCop.CSharp.NamingRules>2016/11/09 21:13:02.000</StyleCop.CSharp.NamingRules>
+      <StyleCop.CSharp.NamingRules.FilesHashCode>0</StyleCop.CSharp.NamingRules.FilesHashCode>
+      <StyleCop.CSharp.OrderingRules>2016/11/09 21:13:02.000</StyleCop.CSharp.OrderingRules>
+      <StyleCop.CSharp.OrderingRules.FilesHashCode>0</StyleCop.CSharp.OrderingRules.FilesHashCode>
+      <StyleCop.CSharp.ReadabilityRules>2016/11/09 21:13:02.000</StyleCop.CSharp.ReadabilityRules>
+      <StyleCop.CSharp.ReadabilityRules.FilesHashCode>0</StyleCop.CSharp.ReadabilityRules.FilesHashCode>
+      <StyleCop.CSharp.SpacingRules>2016/11/09 21:13:02.000</StyleCop.CSharp.SpacingRules>
+      <StyleCop.CSharp.SpacingRules.FilesHashCode>0</StyleCop.CSharp.SpacingRules.FilesHashCode>
+    </timestamps>
+    <violations>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="FileMustHaveHeader" ruleCheckId="SA1633">
+        <context>The file has no header, the header Xml is invalid, or the header is not located at the top of the file.</context>
+        <line>1</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.OrderingRules" rule="SystemUsingDirectivesMustBePlacedBeforeOtherUsingDirectives" ruleCheckId="SA1208">
+        <context>System using directives must be placed before all other using directives.</context>
+        <line>3</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
+        <context>The class must have a documentation header.</context>
+        <line>6</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="CurlyBracketsForMultiLineStatementsMustNotShareLine" ruleCheckId="SA1500">
+        <context>If a statement spans multiple lines, the opening curly bracket must be placed on its own line.</context>
+        <line>6</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="OpeningCurlyBracketsMustNotBeFollowedByBlankLine" ruleCheckId="SA1505">
+        <context>An opening curly bracket must not be followed by a blank line.</context>
+        <line>6</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="TabsMustNotBeUsed" ruleCheckId="SA1027">
+        <context>Tabs are not allowed. Use spaces instead.</context>
+        <line>59</line>
+        <index>1568</index>
+        <endIndex>1568</endIndex>
+        <startLine>59</startLine>
+        <startColumn>1</startColumn>
+        <endLine>59</endLine>
+        <endColumn>1</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="TabsMustNotBeUsed" ruleCheckId="SA1027">
+        <context>Tabs are not allowed. Use spaces instead.</context>
+        <line>60</line>
+        <index>1571</index>
+        <endIndex>1571</endIndex>
+        <startLine>60</startLine>
+        <startColumn>1</startColumn>
+        <endLine>60</endLine>
+        <endColumn>1</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="TabsMustNotBeUsed" ruleCheckId="SA1027">
+        <context>Tabs are not allowed. Use spaces instead.</context>
+        <line>61</line>
+        <index>1608</index>
+        <endIndex>1608</endIndex>
+        <startLine>61</startLine>
+        <startColumn>1</startColumn>
+        <endLine>61</endLine>
+        <endColumn>1</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
+        <context>The field must have a documentation header.</context>
+        <line>8</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.MaintainabilityRules" rule="FieldsMustBePrivate" ruleCheckId="SA1401">
+        <context>Fields must be declared with private access. Use properties to expose fields.</context>
+        <line>8</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="AccessibleFieldsMustBeginWithUpperCaseLetter" ruleCheckId="SA1307">
+        <context>Public and internal fields must start with an upper-case letter: cam.</context>
+        <line>8</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
+        <context>The field must have a documentation header.</context>
+        <line>9</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.MaintainabilityRules" rule="AccessModifierMustBeDeclared" ruleCheckId="SA1400">
+        <context>The field must have an access modifier.</context>
+        <line>9</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.OrderingRules" rule="ElementsMustBeOrderedByAccess" ruleCheckId="SA1202">
+        <context>All private fields must be placed after all public fields.</context>
+        <line>13</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.OrderingRules" rule="ElementsMustBeOrderedByAccess" ruleCheckId="SA1202">
+        <context>All private fields must be placed after all public fields.</context>
+        <line>14</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.OrderingRules" rule="ElementsMustBeOrderedByAccess" ruleCheckId="SA1202">
+        <context>All private fields must be placed after all public fields.</context>
+        <line>15</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.OrderingRules" rule="ElementsMustBeOrderedByAccess" ruleCheckId="SA1202">
+        <context>All private fields must be placed after all public fields.</context>
+        <line>19</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.OrderingRules" rule="ElementsMustBeOrderedByAccess" ruleCheckId="SA1202">
+        <context>All private fields must be placed after all public fields.</context>
+        <line>20</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.OrderingRules" rule="ElementsMustBeOrderedByAccess" ruleCheckId="SA1202">
+        <context>All private fields must be placed after all public fields.</context>
+        <line>21</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.OrderingRules" rule="ElementsMustBeOrderedByAccess" ruleCheckId="SA1202">
+        <context>All private fields must be placed after all public fields.</context>
+        <line>23</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.OrderingRules" rule="ElementsMustBeOrderedByAccess" ruleCheckId="SA1202">
+        <context>All private fields must be placed after all public fields.</context>
+        <line>24</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.OrderingRules" rule="ElementsMustBeOrderedByAccess" ruleCheckId="SA1202">
+        <context>All private fields must be placed after all public fields.</context>
+        <line>26</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.OrderingRules" rule="ElementsMustBeOrderedByAccess" ruleCheckId="SA1202">
+        <context>All private fields must be placed after all public fields.</context>
+        <line>28</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.OrderingRules" rule="ElementsMustBeOrderedByAccess" ruleCheckId="SA1202">
+        <context>All private fields must be placed after all public fields.</context>
+        <line>29</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.OrderingRules" rule="ElementsMustBeOrderedByAccess" ruleCheckId="SA1202">
+        <context>All private fields must be placed after all public fields.</context>
+        <line>32</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.OrderingRules" rule="ElementsMustBeOrderedByAccess" ruleCheckId="SA1202">
+        <context>All private fields must be placed after all public fields.</context>
+        <line>34</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.OrderingRules" rule="ElementsMustBeOrderedByAccess" ruleCheckId="SA1202">
+        <context>All private fields must be placed after all public fields.</context>
+        <line>37</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
+        <context>The field must have a documentation header.</context>
+        <line>10</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.MaintainabilityRules" rule="AccessModifierMustBeDeclared" ruleCheckId="SA1400">
+        <context>The field must have an access modifier.</context>
+        <line>10</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
+        <context>The field must have a documentation header.</context>
+        <line>11</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.MaintainabilityRules" rule="AccessModifierMustBeDeclared" ruleCheckId="SA1400">
+        <context>The field must have an access modifier.</context>
+        <line>11</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
+        <context>The field must have a documentation header.</context>
+        <line>13</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.MaintainabilityRules" rule="FieldsMustBePrivate" ruleCheckId="SA1401">
+        <context>Fields must be declared with private access. Use properties to expose fields.</context>
+        <line>13</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="AccessibleFieldsMustBeginWithUpperCaseLetter" ruleCheckId="SA1307">
+        <context>Public and internal fields must start with an upper-case letter: particlePrefab.</context>
+        <line>13</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
+        <context>The field must have a documentation header.</context>
+        <line>14</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.MaintainabilityRules" rule="FieldsMustBePrivate" ruleCheckId="SA1401">
+        <context>Fields must be declared with private access. Use properties to expose fields.</context>
+        <line>14</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="AccessibleFieldsMustBeginWithUpperCaseLetter" ruleCheckId="SA1307">
+        <context>Public and internal fields must start with an upper-case letter: springPrefab.</context>
+        <line>14</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
+        <context>The field must have a documentation header.</context>
+        <line>15</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.MaintainabilityRules" rule="FieldsMustBePrivate" ruleCheckId="SA1401">
+        <context>Fields must be declared with private access. Use properties to expose fields.</context>
+        <line>15</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="AccessibleFieldsMustBeginWithUpperCaseLetter" ruleCheckId="SA1307">
+        <context>Public and internal fields must start with an upper-case letter: lineMaterial.</context>
+        <line>15</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
+        <context>The field must have a documentation header.</context>
+        <line>17</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.MaintainabilityRules" rule="AccessModifierMustBeDeclared" ruleCheckId="SA1400">
+        <context>The field must have an access modifier.</context>
+        <line>17</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
+        <context>The field must have a documentation header.</context>
+        <line>19</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.MaintainabilityRules" rule="FieldsMustBePrivate" ruleCheckId="SA1401">
+        <context>Fields must be declared with private access. Use properties to expose fields.</context>
+        <line>19</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="AccessibleFieldsMustBeginWithUpperCaseLetter" ruleCheckId="SA1307">
+        <context>Public and internal fields must start with an upper-case letter: width.</context>
+        <line>19</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
+        <context>The field must have a documentation header.</context>
+        <line>20</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.MaintainabilityRules" rule="FieldsMustBePrivate" ruleCheckId="SA1401">
+        <context>Fields must be declared with private access. Use properties to expose fields.</context>
+        <line>20</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="AccessibleFieldsMustBeginWithUpperCaseLetter" ruleCheckId="SA1307">
+        <context>Public and internal fields must start with an upper-case letter: height.</context>
+        <line>20</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
+        <context>The field must have a documentation header.</context>
+        <line>21</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.MaintainabilityRules" rule="FieldsMustBePrivate" ruleCheckId="SA1401">
+        <context>Fields must be declared with private access. Use properties to expose fields.</context>
+        <line>21</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="AccessibleFieldsMustBeginWithUpperCaseLetter" ruleCheckId="SA1307">
+        <context>Public and internal fields must start with an upper-case letter: padding.</context>
+        <line>21</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
+        <context>The field must have a documentation header.</context>
+        <line>23</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.MaintainabilityRules" rule="FieldsMustBePrivate" ruleCheckId="SA1401">
+        <context>Fields must be declared with private access. Use properties to expose fields.</context>
+        <line>23</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="AccessibleFieldsMustBeginWithUpperCaseLetter" ruleCheckId="SA1307">
+        <context>Public and internal fields must start with an upper-case letter: mass.</context>
+        <line>23</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
+        <context>The field must have a documentation header.</context>
+        <line>24</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.MaintainabilityRules" rule="FieldsMustBePrivate" ruleCheckId="SA1401">
+        <context>Fields must be declared with private access. Use properties to expose fields.</context>
+        <line>24</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="AccessibleFieldsMustBeginWithUpperCaseLetter" ruleCheckId="SA1307">
+        <context>Public and internal fields must start with an upper-case letter: gravity.</context>
+        <line>24</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
+        <context>The field must have a documentation header.</context>
+        <line>26</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.MaintainabilityRules" rule="FieldsMustBePrivate" ruleCheckId="SA1401">
+        <context>Fields must be declared with private access. Use properties to expose fields.</context>
+        <line>26</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="AccessibleFieldsMustBeginWithUpperCaseLetter" ruleCheckId="SA1307">
+        <context>Public and internal fields must start with an upper-case letter: springConst.</context>
+        <line>26</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
+        <context>The field must have a documentation header.</context>
+        <line>28</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.MaintainabilityRules" rule="FieldsMustBePrivate" ruleCheckId="SA1401">
+        <context>Fields must be declared with private access. Use properties to expose fields.</context>
+        <line>28</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="AccessibleFieldsMustBeginWithUpperCaseLetter" ruleCheckId="SA1307">
+        <context>Public and internal fields must start with an upper-case letter: dampingFactor.</context>
+        <line>28</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
+        <context>The field must have a documentation header.</context>
+        <line>29</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.MaintainabilityRules" rule="FieldsMustBePrivate" ruleCheckId="SA1401">
+        <context>Fields must be declared with private access. Use properties to expose fields.</context>
+        <line>29</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="AccessibleFieldsMustBeginWithUpperCaseLetter" ruleCheckId="SA1307">
+        <context>Public and internal fields must start with an upper-case letter: restLength.</context>
+        <line>29</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
+        <context>The field must have a documentation header.</context>
+        <line>32</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.MaintainabilityRules" rule="FieldsMustBePrivate" ruleCheckId="SA1401">
+        <context>Fields must be declared with private access. Use properties to expose fields.</context>
+        <line>32</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="AccessibleFieldsMustBeginWithUpperCaseLetter" ruleCheckId="SA1307">
+        <context>Public and internal fields must start with an upper-case letter: windStrength.</context>
+        <line>32</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
+        <context>The field must have a documentation header.</context>
+        <line>34</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.MaintainabilityRules" rule="FieldsMustBePrivate" ruleCheckId="SA1401">
+        <context>Fields must be declared with private access. Use properties to expose fields.</context>
+        <line>34</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="AccessibleFieldsMustBeginWithUpperCaseLetter" ruleCheckId="SA1307">
+        <context>Public and internal fields must start with an upper-case letter: wind.</context>
+        <line>34</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
+        <context>The field must have a documentation header.</context>
+        <line>37</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.MaintainabilityRules" rule="FieldsMustBePrivate" ruleCheckId="SA1401">
+        <context>Fields must be declared with private access. Use properties to expose fields.</context>
+        <line>37</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.NamingRules" rule="AccessibleFieldsMustBeginWithUpperCaseLetter" ruleCheckId="SA1307">
+        <context>Public and internal fields must start with an upper-case letter: breakFactor.</context>
+        <line>37</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
+        <context>The method must have a documentation header.</context>
+        <line>40</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="CurlyBracketsForMultiLineStatementsMustNotShareLine" ruleCheckId="SA1500">
+        <context>If a statement spans multiple lines, the opening curly bracket must be placed on its own line.</context>
+        <line>40</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ClosingCurlyBracketMustBeFollowedByBlankLine" ruleCheckId="SA1513">
+        <context>Statements or elements wrapped in curly brackets must be followed by a blank line.</context>
+        <line>54</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.MaintainabilityRules" rule="AccessModifierMustBeDeclared" ruleCheckId="SA1400">
+        <context>The method must have an access modifier.</context>
+        <line>40</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.OrderingRules" rule="ElementsMustBeOrderedByAccess" ruleCheckId="SA1202">
+        <context>All private methods must be placed after all public methods.</context>
+        <line>287</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.OrderingRules" rule="ElementsMustBeOrderedByAccess" ruleCheckId="SA1202">
+        <context>All private methods must be placed after all public methods.</context>
+        <line>305</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.OrderingRules" rule="ElementsMustBeOrderedByAccess" ruleCheckId="SA1202">
+        <context>All private methods must be placed after all public methods.</context>
+        <line>332</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to particleList must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>41</line>
+        <index>953</index>
+        <endIndex>964</endIndex>
+        <startLine>41</startLine>
+        <startColumn>9</startColumn>
+        <endLine>41</endLine>
+        <endColumn>20</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to springDamperList must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>42</line>
+        <index>1024</index>
+        <endIndex>1039</endIndex>
+        <startLine>42</startLine>
+        <startColumn>9</startColumn>
+        <endLine>42</endLine>
+        <endColumn>24</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to triangleList must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>43</line>
+        <index>1078</index>
+        <endIndex>1089</endIndex>
+        <startLine>43</startLine>
+        <startColumn>9</startColumn>
+        <endLine>43</endLine>
+        <endColumn>20</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to springdrawers must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>44</line>
+        <index>1124</index>
+        <endIndex>1136</endIndex>
+        <startLine>44</startLine>
+        <startColumn>9</startColumn>
+        <endLine>44</endLine>
+        <endColumn>21</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to SpawnParticles must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>46</line>
+        <index>1175</index>
+        <endIndex>1188</endIndex>
+        <startLine>46</startLine>
+        <startColumn>9</startColumn>
+        <endLine>46</endLine>
+        <endColumn>22</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to width must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>46</line>
+        <index>1190</index>
+        <endIndex>1194</endIndex>
+        <startLine>46</startLine>
+        <startColumn>24</startColumn>
+        <endLine>46</endLine>
+        <endColumn>28</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to height must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>46</line>
+        <index>1197</index>
+        <endIndex>1202</endIndex>
+        <startLine>46</startLine>
+        <startColumn>31</startColumn>
+        <endLine>46</endLine>
+        <endColumn>36</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to SetSpringDampers must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>47</line>
+        <index>1249</index>
+        <endIndex>1264</endIndex>
+        <startLine>47</startLine>
+        <startColumn>9</startColumn>
+        <endLine>47</endLine>
+        <endColumn>24</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to SetTriangles must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>48</line>
+        <index>1278</index>
+        <endIndex>1289</endIndex>
+        <startLine>48</startLine>
+        <startColumn>9</startColumn>
+        <endLine>48</endLine>
+        <endColumn>20</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to particleList must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>51</line>
+        <index>1372</index>
+        <endIndex>1383</endIndex>
+        <startLine>51</startLine>
+        <startColumn>37</startColumn>
+        <endLine>51</endLine>
+        <endColumn>48</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to particleList must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>55</line>
+        <index>1477</index>
+        <endIndex>1488</endIndex>
+        <startLine>55</startLine>
+        <startColumn>25</startColumn>
+        <endLine>55</endLine>
+        <endColumn>36</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to cam must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>57</line>
+        <index>1531</index>
+        <endIndex>1533</endIndex>
+        <startLine>57</startLine>
+        <startColumn>9</startColumn>
+        <endLine>57</endLine>
+        <endColumn>11</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SingleLineCommentsMustBeginWithSingleSpace" ruleCheckId="SA1005">
+        <context>The comment must start with a single space. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
+        <line>41</line>
+        <index>997</index>
+        <endIndex>1013</endIndex>
+        <startLine>41</startLine>
+        <startColumn>53</startColumn>
+        <endLine>41</endLine>
+        <endColumn>69</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SingleLineCommentsMustBeginWithSingleSpace" ruleCheckId="SA1005">
+        <context>The comment must start with a single space. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
+        <line>46</line>
+        <index>1215</index>
+        <endIndex>1238</endIndex>
+        <startLine>46</startLine>
+        <startColumn>49</startColumn>
+        <endLine>46</endLine>
+        <endColumn>72</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="TabsMustNotBeUsed" ruleCheckId="SA1027">
+        <context>Tabs are not allowed. Use spaces instead.</context>
+        <line>58</line>
+        <index>1564</index>
+        <endIndex>1564</endIndex>
+        <startLine>58</startLine>
+        <startColumn>1</startColumn>
+        <endLine>58</endLine>
+        <endColumn>1</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
+        <context>The method must have a documentation header.</context>
+        <line>61</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="CurlyBracketsForMultiLineStatementsMustNotShareLine" ruleCheckId="SA1500">
+        <context>If a statement spans multiple lines, the opening curly bracket must be placed on its own line.</context>
+        <line>61</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="CurlyBracketsMustNotBeOmitted" ruleCheckId="SA1503">
+        <context>The body of the else statement must be wrapped in opening and closing curly brackets.</context>
+        <line>107</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="CurlyBracketsMustNotBeOmitted" ruleCheckId="SA1503">
+        <context>The body of the if statement must be wrapped in opening and closing curly brackets.</context>
+        <line>116</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="CurlyBracketsMustNotBeOmitted" ruleCheckId="SA1503">
+        <context>The body of the if statement must be wrapped in opening and closing curly brackets.</context>
+        <line>123</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="CurlyBracketsMustNotBeOmitted" ruleCheckId="SA1503">
+        <context>The body of the if statement must be wrapped in opening and closing curly brackets.</context>
+        <line>130</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="CurlyBracketsMustNotBeOmitted" ruleCheckId="SA1503">
+        <context>The body of the if statement must be wrapped in opening and closing curly brackets.</context>
+        <line>137</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="CurlyBracketsMustNotBeOmitted" ruleCheckId="SA1503">
+        <context>The body of the if statement must be wrapped in opening and closing curly brackets.</context>
+        <line>142</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="CurlyBracketsMustNotBeOmitted" ruleCheckId="SA1503">
+        <context>The body of the else statement must be wrapped in opening and closing curly brackets.</context>
+        <line>145</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="OpeningCurlyBracketsMustNotBeFollowedByBlankLine" ruleCheckId="SA1505">
+        <context>An opening curly bracket must not be followed by a blank line.</context>
+        <line>99</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ChainedStatementBlocksMustNotBePrecededByBlankLine" ruleCheckId="SA1510">
+        <context>An else, catch, or finally statement must not be preceded by a blank line.</context>
+        <line>144</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ClosingCurlyBracketsMustNotBePrecededByBlankLine" ruleCheckId="SA1508">
+        <context>A closing curly bracket must not be preceded by a blank line.</context>
+        <line>148</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.MaintainabilityRules" rule="AccessModifierMustBeDeclared" ruleCheckId="SA1400">
+        <context>The method must have an access modifier.</context>
+        <line>61</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="BlockStatementsMustNotContainEmbeddedComments" ruleCheckId="SA1108">
+        <context>A comment may not be placed within the bracketed statement.</context>
+        <line>65</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="BlockStatementsMustNotContainEmbeddedComments" ruleCheckId="SA1108">
+        <context>A comment may not be placed within the bracketed statement.</context>
+        <line>70</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="BlockStatementsMustNotContainEmbeddedComments" ruleCheckId="SA1108">
+        <context>A comment may not be placed within the bracketed statement.</context>
+        <line>75</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="BlockStatementsMustNotContainEmbeddedComments" ruleCheckId="SA1108">
+        <context>A comment may not be placed within the bracketed statement.</context>
+        <line>81</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="BlockStatementsMustNotContainEmbeddedComments" ruleCheckId="SA1108">
+        <context>A comment may not be placed within the bracketed statement.</context>
+        <line>98</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="BlockStatementsMustNotContainEmbeddedComments" ruleCheckId="SA1108">
+        <context>A comment may not be placed within the bracketed statement.</context>
+        <line>111</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="BlockStatementsMustNotContainEmbeddedComments" ruleCheckId="SA1108">
+        <context>A comment may not be placed within the bracketed statement.</context>
+        <line>113</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="BlockStatementsMustNotContainEmbeddedComments" ruleCheckId="SA1108">
+        <context>A comment may not be placed within the bracketed statement.</context>
+        <line>120</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="BlockStatementsMustNotContainEmbeddedComments" ruleCheckId="SA1108">
+        <context>A comment may not be placed within the bracketed statement.</context>
+        <line>127</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="BlockStatementsMustNotContainEmbeddedComments" ruleCheckId="SA1108">
+        <context>A comment may not be placed within the bracketed statement.</context>
+        <line>134</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to springDamperList must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>65</line>
+        <index>1797</index>
+        <endIndex>1812</endIndex>
+        <startLine>65</startLine>
+        <startColumn>37</startColumn>
+        <endLine>65</endLine>
+        <endColumn>52</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to triangleList must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>70</line>
+        <index>1936</index>
+        <endIndex>1947</endIndex>
+        <startLine>70</startLine>
+        <startColumn>32</startColumn>
+        <endLine>70</endLine>
+        <endColumn>43</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to gravity must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>78</line>
+        <index>2196</index>
+        <endIndex>2202</endIndex>
+        <startLine>78</startLine>
+        <startColumn>34</startColumn>
+        <endLine>78</endLine>
+        <endColumn>40</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to particleList must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>75</line>
+        <index>2071</index>
+        <endIndex>2082</endIndex>
+        <startLine>75</startLine>
+        <startColumn>37</startColumn>
+        <endLine>75</endLine>
+        <endColumn>48</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to dampingFactor must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>83</line>
+        <index>2397</index>
+        <endIndex>2409</endIndex>
+        <startLine>83</startLine>
+        <startColumn>32</startColumn>
+        <endLine>83</endLine>
+        <endColumn>44</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to springConst must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>84</line>
+        <index>2442</index>
+        <endIndex>2452</endIndex>
+        <startLine>84</startLine>
+        <startColumn>30</startColumn>
+        <endLine>84</endLine>
+        <endColumn>40</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to restLength must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>85</line>
+        <index>2484</index>
+        <endIndex>2493</endIndex>
+        <startLine>85</startLine>
+        <startColumn>29</startColumn>
+        <endLine>85</endLine>
+        <endColumn>38</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to Destroy must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>90</line>
+        <index>2645</index>
+        <endIndex>2651</endIndex>
+        <startLine>90</startLine>
+        <startColumn>17</startColumn>
+        <endLine>90</endLine>
+        <endColumn>23</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to springdrawers must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>90</line>
+        <index>2653</index>
+        <endIndex>2665</endIndex>
+        <startLine>90</startLine>
+        <startColumn>25</startColumn>
+        <endLine>90</endLine>
+        <endColumn>37</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to springDamperList must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>90</line>
+        <index>2667</index>
+        <endIndex>2682</endIndex>
+        <startLine>90</startLine>
+        <startColumn>39</startColumn>
+        <endLine>90</endLine>
+        <endColumn>54</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to springdrawers must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>91</line>
+        <index>2728</index>
+        <endIndex>2740</endIndex>
+        <startLine>91</startLine>
+        <startColumn>17</startColumn>
+        <endLine>91</endLine>
+        <endColumn>29</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to springdrawers must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>91</line>
+        <index>2749</index>
+        <endIndex>2761</endIndex>
+        <startLine>91</startLine>
+        <startColumn>38</startColumn>
+        <endLine>91</endLine>
+        <endColumn>50</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to springDamperList must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>91</line>
+        <index>2763</index>
+        <endIndex>2778</endIndex>
+        <startLine>91</startLine>
+        <startColumn>52</startColumn>
+        <endLine>91</endLine>
+        <endColumn>67</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to springDamperList must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>92</line>
+        <index>2824</index>
+        <endIndex>2839</endIndex>
+        <startLine>92</startLine>
+        <startColumn>17</startColumn>
+        <endLine>92</endLine>
+        <endColumn>32</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to breakFactor must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>88</line>
+        <index>2563</index>
+        <endIndex>2573</endIndex>
+        <startLine>88</startLine>
+        <startColumn>33</startColumn>
+        <endLine>88</endLine>
+        <endColumn>43</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to triangleList must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>104</line>
+        <index>3224</index>
+        <endIndex>3235</endIndex>
+        <startLine>104</startLine>
+        <startColumn>21</startColumn>
+        <endLine>104</endLine>
+        <endColumn>32</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to springDamperList must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>101</line>
+        <index>3052</index>
+        <endIndex>3067</endIndex>
+        <startLine>101</startLine>
+        <startColumn>22</startColumn>
+        <endLine>101</endLine>
+        <endColumn>37</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to springDamperList must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>101</line>
+        <index>3090</index>
+        <endIndex>3105</endIndex>
+        <startLine>101</startLine>
+        <startColumn>60</startColumn>
+        <endLine>101</endLine>
+        <endColumn>75</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to springDamperList must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>102</line>
+        <index>3149</index>
+        <endIndex>3164</endIndex>
+        <startLine>102</startLine>
+        <startColumn>25</startColumn>
+        <endLine>102</endLine>
+        <endColumn>40</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to windStrength must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>107</line>
+        <index>3349</index>
+        <endIndex>3360</endIndex>
+        <startLine>107</startLine>
+        <startColumn>60</startColumn>
+        <endLine>107</endLine>
+        <endColumn>71</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to wind must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>96</line>
+        <index>2894</index>
+        <endIndex>2897</endIndex>
+        <startLine>96</startLine>
+        <startColumn>13</startColumn>
+        <endLine>96</endLine>
+        <endColumn>16</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to particleList must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>111</line>
+        <index>3467</index>
+        <endIndex>3478</endIndex>
+        <startLine>111</startLine>
+        <startColumn>37</startColumn>
+        <endLine>111</endLine>
+        <endColumn>48</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="OpeningParenthesisMustBeSpacedCorrectly" ruleCheckId="SA1008">
+        <context>Invalid spacing around the opening parenthesis.</context>
+        <line>61</line>
+        <index>1625</index>
+        <endIndex>1625</endIndex>
+        <startLine>61</startLine>
+        <startColumn>18</startColumn>
+        <endLine>61</endLine>
+        <endColumn>18</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SingleLineCommentsMustBeginWithSingleSpace" ruleCheckId="SA1005">
+        <context>The comment must start with a single space. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
+        <line>65</line>
+        <index>1816</index>
+        <endIndex>1845</endIndex>
+        <startLine>65</startLine>
+        <startColumn>56</startColumn>
+        <endLine>65</endLine>
+        <endColumn>85</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SingleLineCommentsMustBeginWithSingleSpace" ruleCheckId="SA1005">
+        <context>The comment must start with a single space. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
+        <line>70</line>
+        <index>1951</index>
+        <endIndex>1975</endIndex>
+        <startLine>70</startLine>
+        <startColumn>47</startColumn>
+        <endLine>70</endLine>
+        <endColumn>71</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SingleLineCommentsMustBeginWithSingleSpace" ruleCheckId="SA1005">
+        <context>The comment must start with a single space. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
+        <line>75</line>
+        <index>2088</index>
+        <endIndex>2102</endIndex>
+        <startLine>75</startLine>
+        <startColumn>54</startColumn>
+        <endLine>75</endLine>
+        <endColumn>68</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="KeywordsMustBeSpacedCorrectly" ruleCheckId="SA1000">
+        <context>The spacing around the keyword 'foreach' is invalid.</context>
+        <line>81</line>
+        <index>2262</index>
+        <endIndex>2268</endIndex>
+        <startLine>81</startLine>
+        <startColumn>9</startColumn>
+        <endLine>81</endLine>
+        <endColumn>15</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SingleLineCommentsMustBeginWithSingleSpace" ruleCheckId="SA1005">
+        <context>The comment must start with a single space. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
+        <line>81</line>
+        <index>2302</index>
+        <endIndex>2333</endIndex>
+        <startLine>81</startLine>
+        <startColumn>49</startColumn>
+        <endLine>81</endLine>
+        <endColumn>80</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SingleLineCommentsMustBeginWithSingleSpace" ruleCheckId="SA1005">
+        <context>The comment must start with a single space. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
+        <line>98</line>
+        <index>2964</index>
+        <endIndex>2990</endIndex>
+        <startLine>98</startLine>
+        <startColumn>53</startColumn>
+        <endLine>98</endLine>
+        <endColumn>79</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SingleLineCommentsMustBeginWithSingleSpace" ruleCheckId="SA1005">
+        <context>The comment must start with a single space. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
+        <line>111</line>
+        <index>3487</index>
+        <endIndex>3502</endIndex>
+        <startLine>111</startLine>
+        <startColumn>57</startColumn>
+        <endLine>111</endLine>
+        <endColumn>72</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SingleLineCommentsMustBeginWithSingleSpace" ruleCheckId="SA1005">
+        <context>The comment must start with a single space. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
+        <line>113</line>
+        <index>3596</index>
+        <endIndex>3602</endIndex>
+        <startLine>113</startLine>
+        <startColumn>81</startColumn>
+        <endLine>113</endLine>
+        <endColumn>87</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SingleLineCommentsMustBeginWithSingleSpace" ruleCheckId="SA1005">
+        <context>The comment must start with a single space. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
+        <line>120</line>
+        <index>3895</index>
+        <endIndex>3903</endIndex>
+        <startLine>120</startLine>
+        <startColumn>96</startColumn>
+        <endLine>120</endLine>
+        <endColumn>104</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SingleLineCommentsMustBeginWithSingleSpace" ruleCheckId="SA1005">
+        <context>The comment must start with a single space. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
+        <line>127</line>
+        <index>4182</index>
+        <endIndex>4192</endIndex>
+        <startLine>127</startLine>
+        <startColumn>82</startColumn>
+        <endLine>127</endLine>
+        <endColumn>92</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SingleLineCommentsMustBeginWithSingleSpace" ruleCheckId="SA1005">
+        <context>The comment must start with a single space. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
+        <line>134</line>
+        <index>4479</index>
+        <endIndex>4489</endIndex>
+        <startLine>134</startLine>
+        <startColumn>97</startColumn>
+        <endLine>134</endLine>
+        <endColumn>107</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SingleLineCommentsMustBeginWithSingleSpace" ruleCheckId="SA1005">
+        <context>The comment must start with a single space. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
+        <line>144</line>
+        <index>4824</index>
+        <endIndex>4834</endIndex>
+        <startLine>144</startLine>
+        <startColumn>28</startColumn>
+        <endLine>144</endLine>
+        <endColumn>38</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
+        <context>The method must have a documentation header.</context>
+        <line>150</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.MaintainabilityRules" rule="AccessModifierMustBeDeclared" ruleCheckId="SA1400">
+        <context>The method must have an access modifier.</context>
+        <line>150</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="BlockStatementsMustNotContainEmbeddedComments" ruleCheckId="SA1108">
+        <context>A comment may not be placed within the bracketed statement.</context>
+        <line>153</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to springdrawers must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>153</line>
+        <index>5049</index>
+        <endIndex>5061</endIndex>
+        <startLine>153</startLine>
+        <startColumn>35</startColumn>
+        <endLine>153</endLine>
+        <endColumn>47</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to springDamperList must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>163</line>
+        <index>5384</index>
+        <endIndex>5399</endIndex>
+        <startLine>163</startLine>
+        <startColumn>35</startColumn>
+        <endLine>163</endLine>
+        <endColumn>50</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to springDamperList must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>164</line>
+        <index>5453</index>
+        <endIndex>5468</endIndex>
+        <startLine>164</startLine>
+        <startColumn>35</startColumn>
+        <endLine>164</endLine>
+        <endColumn>50</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to springDamperList must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>166</line>
+        <index>5523</index>
+        <endIndex>5538</endIndex>
+        <startLine>166</startLine>
+        <startColumn>34</startColumn>
+        <endLine>166</endLine>
+        <endColumn>49</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to springDamperList must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>166</line>
+        <index>5557</index>
+        <endIndex>5572</endIndex>
+        <startLine>166</startLine>
+        <startColumn>68</startColumn>
+        <endLine>166</endLine>
+        <endColumn>83</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SingleLineCommentsMustBeginWithSingleSpace" ruleCheckId="SA1005">
+        <context>The comment must start with a single space. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
+        <line>153</line>
+        <index>5065</index>
+        <endIndex>5094</endIndex>
+        <startLine>153</startLine>
+        <startColumn>51</startColumn>
+        <endLine>153</endLine>
+        <endColumn>80</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="KeywordsMustBeSpacedCorrectly" ruleCheckId="SA1000">
+        <context>The spacing around the keyword 'if' is invalid.</context>
+        <line>160</line>
+        <index>5229</index>
+        <endIndex>5230</endIndex>
+        <startLine>160</startLine>
+        <startColumn>13</startColumn>
+        <endLine>160</endLine>
+        <endColumn>14</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
+        <context>The method must have a documentation header.</context>
+        <line>175</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ClosingCurlyBracketMustBeFollowedByBlankLine" ruleCheckId="SA1513">
+        <context>Statements or elements wrapped in curly brackets must be followed by a blank line.</context>
+        <line>190</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.MaintainabilityRules" rule="AccessModifierMustBeDeclared" ruleCheckId="SA1400">
+        <context>The method must have an access modifier.</context>
+        <line>175</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.MaintainabilityRules" rule="StatementMustNotUseUnnecessaryParenthesis" ruleCheckId="SA1119">
+        <context>The line contains unnecessary parenthesis.</context>
+        <line>188</line>
+        <index>6513</index>
+        <endIndex>6519</endIndex>
+        <startLine>188</startLine>
+        <startColumn>40</startColumn>
+        <endLine>188</endLine>
+        <endColumn>46</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to particlePrefab must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>185</line>
+        <index>6176</index>
+        <endIndex>6189</endIndex>
+        <startLine>185</startLine>
+        <startColumn>47</startColumn>
+        <endLine>185</endLine>
+        <endColumn>60</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to mass must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>186</line>
+        <index>6396</index>
+        <endIndex>6399</endIndex>
+        <startLine>186</startLine>
+        <startColumn>133</startColumn>
+        <endLine>186</endLine>
+        <endColumn>136</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to particleList must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>187</line>
+        <index>6420</index>
+        <endIndex>6431</endIndex>
+        <startLine>187</startLine>
+        <startColumn>17</startColumn>
+        <endLine>187</endLine>
+        <endColumn>28</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to padding must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>189</line>
+        <index>6568</index>
+        <endIndex>6574</endIndex>
+        <startLine>189</startLine>
+        <startColumn>35</startColumn>
+        <endLine>189</endLine>
+        <endColumn>41</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to padding must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>192</line>
+        <index>6652</index>
+        <endIndex>6658</endIndex>
+        <startLine>192</startLine>
+        <startColumn>31</startColumn>
+        <endLine>192</endLine>
+        <endColumn>37</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to particleList must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>195</line>
+        <index>6683</index>
+        <endIndex>6694</endIndex>
+        <startLine>195</startLine>
+        <startColumn>9</startColumn>
+        <endLine>195</endLine>
+        <endColumn>20</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to particleList must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>195</line>
+        <index>6696</index>
+        <endIndex>6707</endIndex>
+        <startLine>195</startLine>
+        <startColumn>22</startColumn>
+        <endLine>195</endLine>
+        <endColumn>33</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to particleList must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>196</line>
+        <index>6744</index>
+        <endIndex>6755</endIndex>
+        <startLine>196</startLine>
+        <startColumn>9</startColumn>
+        <endLine>196</endLine>
+        <endColumn>20</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to particleList must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>196</line>
+        <index>6757</index>
+        <endIndex>6768</endIndex>
+        <startLine>196</startLine>
+        <startColumn>22</startColumn>
+        <endLine>196</endLine>
+        <endColumn>33</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to particleList must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>198</line>
+        <index>6811</index>
+        <endIndex>6822</endIndex>
+        <startLine>198</startLine>
+        <startColumn>9</startColumn>
+        <endLine>198</endLine>
+        <endColumn>20</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to particleList must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>199</line>
+        <index>6851</index>
+        <endIndex>6862</endIndex>
+        <startLine>199</startLine>
+        <startColumn>9</startColumn>
+        <endLine>199</endLine>
+        <endColumn>20</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="KeywordsMustBeSpacedCorrectly" ruleCheckId="SA1000">
+        <context>The spacing around the keyword 'for' is invalid.</context>
+        <line>183</line>
+        <index>6074</index>
+        <endIndex>6076</endIndex>
+        <startLine>183</startLine>
+        <startColumn>13</startColumn>
+        <endLine>183</endLine>
+        <endColumn>15</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="CommasMustBeSpacedCorrectly" ruleCheckId="SA1001">
+        <context>Invalid spacing around the comma.</context>
+        <line>186</line>
+        <index>6389</index>
+        <endIndex>6389</endIndex>
+        <startLine>186</startLine>
+        <startColumn>126</startColumn>
+        <endLine>186</endLine>
+        <endColumn>126</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="CommasMustBeSpacedCorrectly" ruleCheckId="SA1001">
+        <context>Invalid spacing around the comma.</context>
+        <line>186</line>
+        <index>6391</index>
+        <endIndex>6391</endIndex>
+        <startLine>186</startLine>
+        <startColumn>128</startColumn>
+        <endLine>186</endLine>
+        <endColumn>128</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
+        <context>The method must have a documentation header.</context>
+        <line>202</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ClosingCurlyBracketsMustNotBePrecededByBlankLine" ruleCheckId="SA1508">
+        <context>A closing curly bracket must not be preceded by a blank line.</context>
+        <line>217</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="CodeMustNotContainMultipleBlankLinesInARow" ruleCheckId="SA1507">
+        <context>The code must not contain multiple blank lines in a row.</context>
+        <line>235</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.MaintainabilityRules" rule="AccessModifierMustBeDeclared" ruleCheckId="SA1400">
+        <context>The method must have an access modifier.</context>
+        <line>202</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="BlockStatementsMustNotContainEmbeddedComments" ruleCheckId="SA1108">
+        <context>A comment may not be placed within the bracketed statement.</context>
+        <line>210</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="BlockStatementsMustNotContainEmbeddedComments" ruleCheckId="SA1108">
+        <context>A comment may not be placed within the bracketed statement.</context>
+        <line>219</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="BlockStatementsMustNotContainEmbeddedComments" ruleCheckId="SA1108">
+        <context>A comment may not be placed within the bracketed statement.</context>
+        <line>227</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="BlockStatementsMustNotContainEmbeddedComments" ruleCheckId="SA1108">
+        <context>A comment may not be placed within the bracketed statement.</context>
+        <line>236</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to FindIndex must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>206</line>
+        <index>7021</index>
+        <endIndex>7029</endIndex>
+        <startLine>206</startLine>
+        <startColumn>25</startColumn>
+        <endLine>206</endLine>
+        <endColumn>33</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to particleList must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>206</line>
+        <index>7031</index>
+        <endIndex>7042</endIndex>
+        <startLine>206</startLine>
+        <startColumn>35</startColumn>
+        <endLine>206</endLine>
+        <endColumn>46</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to particleList must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>212</line>
+        <index>7351</index>
+        <endIndex>7362</endIndex>
+        <startLine>212</startLine>
+        <startColumn>42</startColumn>
+        <endLine>212</endLine>
+        <endColumn>53</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to particleList must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>213</line>
+        <index>7450</index>
+        <endIndex>7461</endIndex>
+        <startLine>213</startLine>
+        <startColumn>64</startColumn>
+        <endLine>213</endLine>
+        <endColumn>75</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to springConst must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>213</line>
+        <index>7484</index>
+        <endIndex>7494</endIndex>
+        <startLine>213</startLine>
+        <startColumn>98</startColumn>
+        <endLine>213</endLine>
+        <endColumn>108</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to dampingFactor must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>213</line>
+        <index>7497</index>
+        <endIndex>7509</endIndex>
+        <startLine>213</startLine>
+        <startColumn>111</startColumn>
+        <endLine>213</endLine>
+        <endColumn>123</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to restLength must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>213</line>
+        <index>7512</index>
+        <endIndex>7521</endIndex>
+        <startLine>213</startLine>
+        <startColumn>126</startColumn>
+        <endLine>213</endLine>
+        <endColumn>135</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to springdrawers must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>214</line>
+        <index>7542</index>
+        <endIndex>7554</endIndex>
+        <startLine>214</startLine>
+        <startColumn>17</startColumn>
+        <endLine>214</endLine>
+        <endColumn>29</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to CreateSpringDrawer must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>214</line>
+        <index>7560</index>
+        <endIndex>7577</endIndex>
+        <startLine>214</startLine>
+        <startColumn>35</startColumn>
+        <endLine>214</endLine>
+        <endColumn>52</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to springDamperList must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>215</line>
+        <index>7602</index>
+        <endIndex>7617</endIndex>
+        <startLine>215</startLine>
+        <startColumn>17</startColumn>
+        <endLine>215</endLine>
+        <endColumn>32</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to width must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>210</line>
+        <index>7178</index>
+        <endIndex>7182</endIndex>
+        <startLine>210</startLine>
+        <startColumn>31</startColumn>
+        <endLine>210</endLine>
+        <endColumn>35</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to width must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>210</line>
+        <index>7194</index>
+        <endIndex>7198</endIndex>
+        <startLine>210</startLine>
+        <startColumn>47</startColumn>
+        <endLine>210</endLine>
+        <endColumn>51</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to particleList must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>221</line>
+        <index>7847</index>
+        <endIndex>7858</endIndex>
+        <startLine>221</startLine>
+        <startColumn>42</startColumn>
+        <endLine>221</endLine>
+        <endColumn>53</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to width must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>221</line>
+        <index>7868</index>
+        <endIndex>7872</endIndex>
+        <startLine>221</startLine>
+        <startColumn>63</startColumn>
+        <endLine>221</endLine>
+        <endColumn>67</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to particleList must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>222</line>
+        <index>7950</index>
+        <endIndex>7961</endIndex>
+        <startLine>222</startLine>
+        <startColumn>64</startColumn>
+        <endLine>222</endLine>
+        <endColumn>75</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to width must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>222</line>
+        <index>7971</index>
+        <endIndex>7975</endIndex>
+        <startLine>222</startLine>
+        <startColumn>85</startColumn>
+        <endLine>222</endLine>
+        <endColumn>89</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to springConst must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>222</line>
+        <index>7988</index>
+        <endIndex>7998</endIndex>
+        <startLine>222</startLine>
+        <startColumn>102</startColumn>
+        <endLine>222</endLine>
+        <endColumn>112</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to dampingFactor must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>222</line>
+        <index>8001</index>
+        <endIndex>8013</endIndex>
+        <startLine>222</startLine>
+        <startColumn>115</startColumn>
+        <endLine>222</endLine>
+        <endColumn>127</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to restLength must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>222</line>
+        <index>8016</index>
+        <endIndex>8025</endIndex>
+        <startLine>222</startLine>
+        <startColumn>130</startColumn>
+        <endLine>222</endLine>
+        <endColumn>139</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to springdrawers must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>223</line>
+        <index>8046</index>
+        <endIndex>8058</endIndex>
+        <startLine>223</startLine>
+        <startColumn>17</startColumn>
+        <endLine>223</endLine>
+        <endColumn>29</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to CreateSpringDrawer must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>223</line>
+        <index>8064</index>
+        <endIndex>8081</endIndex>
+        <startLine>223</startLine>
+        <startColumn>35</startColumn>
+        <endLine>223</endLine>
+        <endColumn>52</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to springDamperList must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>224</line>
+        <index>8106</index>
+        <endIndex>8121</endIndex>
+        <startLine>224</startLine>
+        <startColumn>17</startColumn>
+        <endLine>224</endLine>
+        <endColumn>32</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to width must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>219</line>
+        <index>7672</index>
+        <endIndex>7676</endIndex>
+        <startLine>219</startLine>
+        <startColumn>25</startColumn>
+        <endLine>219</endLine>
+        <endColumn>29</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to particleList must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>219</line>
+        <index>7680</index>
+        <endIndex>7691</endIndex>
+        <startLine>219</startLine>
+        <startColumn>33</startColumn>
+        <endLine>219</endLine>
+        <endColumn>44</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to particleList must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>229</line>
+        <index>8346</index>
+        <endIndex>8357</endIndex>
+        <startLine>229</startLine>
+        <startColumn>42</startColumn>
+        <endLine>229</endLine>
+        <endColumn>53</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to width must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>229</line>
+        <index>8367</index>
+        <endIndex>8371</endIndex>
+        <startLine>229</startLine>
+        <startColumn>63</startColumn>
+        <endLine>229</endLine>
+        <endColumn>67</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to particleList must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>230</line>
+        <index>8453</index>
+        <endIndex>8464</endIndex>
+        <startLine>230</startLine>
+        <startColumn>64</startColumn>
+        <endLine>230</endLine>
+        <endColumn>75</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to width must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>230</line>
+        <index>8474</index>
+        <endIndex>8478</endIndex>
+        <startLine>230</startLine>
+        <startColumn>85</startColumn>
+        <endLine>230</endLine>
+        <endColumn>89</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to springConst must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>230</line>
+        <index>8495</index>
+        <endIndex>8505</endIndex>
+        <startLine>230</startLine>
+        <startColumn>106</startColumn>
+        <endLine>230</endLine>
+        <endColumn>116</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to dampingFactor must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>230</line>
+        <index>8508</index>
+        <endIndex>8520</endIndex>
+        <startLine>230</startLine>
+        <startColumn>119</startColumn>
+        <endLine>230</endLine>
+        <endColumn>131</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to restLength must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>230</line>
+        <index>8523</index>
+        <endIndex>8532</endIndex>
+        <startLine>230</startLine>
+        <startColumn>134</startColumn>
+        <endLine>230</endLine>
+        <endColumn>143</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to springdrawers must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>231</line>
+        <index>8553</index>
+        <endIndex>8565</endIndex>
+        <startLine>231</startLine>
+        <startColumn>17</startColumn>
+        <endLine>231</endLine>
+        <endColumn>29</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to CreateSpringDrawer must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>231</line>
+        <index>8571</index>
+        <endIndex>8588</endIndex>
+        <startLine>231</startLine>
+        <startColumn>35</startColumn>
+        <endLine>231</endLine>
+        <endColumn>52</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to springDamperList must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>232</line>
+        <index>8613</index>
+        <endIndex>8628</endIndex>
+        <startLine>232</startLine>
+        <startColumn>17</startColumn>
+        <endLine>232</endLine>
+        <endColumn>32</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to width must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>227</line>
+        <index>8174</index>
+        <endIndex>8178</endIndex>
+        <startLine>227</startLine>
+        <startColumn>25</startColumn>
+        <endLine>227</endLine>
+        <endColumn>29</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to particleList must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>227</line>
+        <index>8186</index>
+        <endIndex>8197</endIndex>
+        <startLine>227</startLine>
+        <startColumn>37</startColumn>
+        <endLine>227</endLine>
+        <endColumn>48</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to width must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>227</line>
+        <index>8240</index>
+        <endIndex>8244</endIndex>
+        <startLine>227</startLine>
+        <startColumn>91</startColumn>
+        <endLine>227</endLine>
+        <endColumn>95</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to width must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>227</line>
+        <index>8256</index>
+        <endIndex>8260</endIndex>
+        <startLine>227</startLine>
+        <startColumn>107</startColumn>
+        <endLine>227</endLine>
+        <endColumn>111</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to particleList must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>238</line>
+        <index>8855</index>
+        <endIndex>8866</endIndex>
+        <startLine>238</startLine>
+        <startColumn>42</startColumn>
+        <endLine>238</endLine>
+        <endColumn>53</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to width must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>238</line>
+        <index>8876</index>
+        <endIndex>8880</endIndex>
+        <startLine>238</startLine>
+        <startColumn>63</startColumn>
+        <endLine>238</endLine>
+        <endColumn>67</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to particleList must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>239</line>
+        <index>8962</index>
+        <endIndex>8973</endIndex>
+        <startLine>239</startLine>
+        <startColumn>64</startColumn>
+        <endLine>239</endLine>
+        <endColumn>75</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to width must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>239</line>
+        <index>8983</index>
+        <endIndex>8987</endIndex>
+        <startLine>239</startLine>
+        <startColumn>85</startColumn>
+        <endLine>239</endLine>
+        <endColumn>89</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to springConst must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>239</line>
+        <index>9004</index>
+        <endIndex>9014</endIndex>
+        <startLine>239</startLine>
+        <startColumn>106</startColumn>
+        <endLine>239</endLine>
+        <endColumn>116</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to dampingFactor must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>239</line>
+        <index>9017</index>
+        <endIndex>9029</endIndex>
+        <startLine>239</startLine>
+        <startColumn>119</startColumn>
+        <endLine>239</endLine>
+        <endColumn>131</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to restLength must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>239</line>
+        <index>9032</index>
+        <endIndex>9041</endIndex>
+        <startLine>239</startLine>
+        <startColumn>134</startColumn>
+        <endLine>239</endLine>
+        <endColumn>143</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to springdrawers must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>240</line>
+        <index>9062</index>
+        <endIndex>9074</endIndex>
+        <startLine>240</startLine>
+        <startColumn>17</startColumn>
+        <endLine>240</endLine>
+        <endColumn>29</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to CreateSpringDrawer must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>240</line>
+        <index>9080</index>
+        <endIndex>9097</endIndex>
+        <startLine>240</startLine>
+        <startColumn>35</startColumn>
+        <endLine>240</endLine>
+        <endColumn>52</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to springDamperList must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>241</line>
+        <index>9122</index>
+        <endIndex>9137</endIndex>
+        <startLine>241</startLine>
+        <startColumn>17</startColumn>
+        <endLine>241</endLine>
+        <endColumn>32</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to width must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>236</line>
+        <index>8683</index>
+        <endIndex>8687</endIndex>
+        <startLine>236</startLine>
+        <startColumn>25</startColumn>
+        <endLine>236</endLine>
+        <endColumn>29</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to particleList must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>236</line>
+        <index>8695</index>
+        <endIndex>8706</endIndex>
+        <startLine>236</startLine>
+        <startColumn>37</startColumn>
+        <endLine>236</endLine>
+        <endColumn>48</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to width must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>236</line>
+        <index>8731</index>
+        <endIndex>8735</endIndex>
+        <startLine>236</startLine>
+        <startColumn>73</startColumn>
+        <endLine>236</endLine>
+        <endColumn>77</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to width must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>236</line>
+        <index>8747</index>
+        <endIndex>8751</endIndex>
+        <startLine>236</startLine>
+        <startColumn>89</startColumn>
+        <endLine>236</endLine>
+        <endColumn>93</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to particleList must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>204</line>
+        <index>6971</index>
+        <endIndex>6982</endIndex>
+        <startLine>204</startLine>
+        <startColumn>36</startColumn>
+        <endLine>204</endLine>
+        <endColumn>47</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SingleLineCommentsMustBeginWithSingleSpace" ruleCheckId="SA1005">
+        <context>The comment must start with a single space. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
+        <line>209</line>
+        <index>7122</index>
+        <endIndex>7145</endIndex>
+        <startLine>209</startLine>
+        <startColumn>13</startColumn>
+        <endLine>209</endLine>
+        <endColumn>36</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SingleLineCommentsMustBeginWithSingleSpace" ruleCheckId="SA1005">
+        <context>The comment must start with a single space. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
+        <line>210</line>
+        <index>7276</index>
+        <endIndex>7292</endIndex>
+        <startLine>210</startLine>
+        <startColumn>129</startColumn>
+        <endLine>210</endLine>
+        <endColumn>145</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SingleLineCommentsMustBeginWithSingleSpace" ruleCheckId="SA1005">
+        <context>The comment must start with a single space. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
+        <line>219</line>
+        <index>7775</index>
+        <endIndex>7788</endIndex>
+        <startLine>219</startLine>
+        <startColumn>128</startColumn>
+        <endLine>219</endLine>
+        <endColumn>141</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SingleLineCommentsMustBeginWithSingleSpace" ruleCheckId="SA1005">
+        <context>The comment must start with a single space. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
+        <line>227</line>
+        <index>8278</index>
+        <endIndex>8287</endIndex>
+        <startLine>227</startLine>
+        <startColumn>129</startColumn>
+        <endLine>227</endLine>
+        <endColumn>138</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SingleLineCommentsMustBeginWithSingleSpace" ruleCheckId="SA1005">
+        <context>The comment must start with a single space. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
+        <line>236</line>
+        <index>8786</index>
+        <endIndex>8796</endIndex>
+        <startLine>236</startLine>
+        <startColumn>128</startColumn>
+        <endLine>236</endLine>
+        <endColumn>138</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
+        <context>The method must have a documentation header.</context>
+        <line>246</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="CurlyBracketsMustNotBeOmitted" ruleCheckId="SA1503">
+        <context>The body of the if statement must be wrapped in opening and closing curly brackets.</context>
+        <line>260</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="CurlyBracketsMustNotBeOmitted" ruleCheckId="SA1503">
+        <context>The body of the else statement must be wrapped in opening and closing curly brackets.</context>
+        <line>263</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="CurlyBracketsMustNotBeOmitted" ruleCheckId="SA1503">
+        <context>The body of the else statement must be wrapped in opening and closing curly brackets.</context>
+        <line>266</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ChainedStatementBlocksMustNotBePrecededByBlankLine" ruleCheckId="SA1510">
+        <context>An else, catch, or finally statement must not be preceded by a blank line.</context>
+        <line>262</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ChainedStatementBlocksMustNotBePrecededByBlankLine" ruleCheckId="SA1510">
+        <context>An else, catch, or finally statement must not be preceded by a blank line.</context>
+        <line>265</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ClosingCurlyBracketMustBeFollowedByBlankLine" ruleCheckId="SA1513">
+        <context>Statements or elements wrapped in curly brackets must be followed by a blank line.</context>
+        <line>267</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ClosingCurlyBracketsMustNotBePrecededByBlankLine" ruleCheckId="SA1508">
+        <context>A closing curly bracket must not be preceded by a blank line.</context>
+        <line>285</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.MaintainabilityRules" rule="AccessModifierMustBeDeclared" ruleCheckId="SA1400">
+        <context>The method must have an access modifier.</context>
+        <line>246</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to FindIndex must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>251</line>
+        <index>9324</index>
+        <endIndex>9332</endIndex>
+        <startLine>251</startLine>
+        <startColumn>25</startColumn>
+        <endLine>251</endLine>
+        <endColumn>33</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to particleList must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>251</line>
+        <index>9334</index>
+        <endIndex>9345</endIndex>
+        <startLine>251</startLine>
+        <startColumn>35</startColumn>
+        <endLine>251</endLine>
+        <endColumn>46</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to particleList must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>256</line>
+        <index>9512</index>
+        <endIndex>9523</endIndex>
+        <startLine>256</startLine>
+        <startColumn>34</startColumn>
+        <endLine>256</endLine>
+        <endColumn>45</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to particleList must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>256</line>
+        <index>9533</index>
+        <endIndex>9544</endIndex>
+        <startLine>256</startLine>
+        <startColumn>55</startColumn>
+        <endLine>256</endLine>
+        <endColumn>66</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to particleList must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>256</line>
+        <index>9558</index>
+        <endIndex>9569</endIndex>
+        <startLine>256</startLine>
+        <startColumn>80</startColumn>
+        <endLine>256</endLine>
+        <endColumn>91</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to width must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>256</line>
+        <index>9579</index>
+        <endIndex>9583</endIndex>
+        <startLine>256</startLine>
+        <startColumn>101</startColumn>
+        <endLine>256</endLine>
+        <endColumn>105</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to springDamperList must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>257</line>
+        <index>9633</index>
+        <endIndex>9648</endIndex>
+        <startLine>257</startLine>
+        <startColumn>45</startColumn>
+        <endLine>257</endLine>
+        <endColumn>60</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to triangleList must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>268</line>
+        <index>10119</index>
+        <endIndex>10130</endIndex>
+        <startLine>268</startLine>
+        <startColumn>17</startColumn>
+        <endLine>268</endLine>
+        <endColumn>28</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to width must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>254</line>
+        <index>9405</index>
+        <endIndex>9409</endIndex>
+        <startLine>254</startLine>
+        <startColumn>25</startColumn>
+        <endLine>254</endLine>
+        <endColumn>29</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to width must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>254</line>
+        <index>9414</index>
+        <endIndex>9418</endIndex>
+        <startLine>254</startLine>
+        <startColumn>34</startColumn>
+        <endLine>254</endLine>
+        <endColumn>38</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to width must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>254</line>
+        <index>9435</index>
+        <endIndex>9439</endIndex>
+        <startLine>254</startLine>
+        <startColumn>55</startColumn>
+        <endLine>254</endLine>
+        <endColumn>59</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to particleList must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>254</line>
+        <index>9443</index>
+        <endIndex>9454</endIndex>
+        <startLine>254</startLine>
+        <startColumn>63</startColumn>
+        <endLine>254</endLine>
+        <endColumn>74</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to particleList must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>249</line>
+        <index>9274</index>
+        <endIndex>9285</endIndex>
+        <startLine>249</startLine>
+        <startColumn>37</startColumn>
+        <endLine>249</endLine>
+        <endColumn>48</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to FindIndex must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>275</line>
+        <index>10278</index>
+        <endIndex>10286</endIndex>
+        <startLine>275</startLine>
+        <startColumn>25</startColumn>
+        <endLine>275</endLine>
+        <endColumn>33</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to particleList must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>275</line>
+        <index>10288</index>
+        <endIndex>10299</endIndex>
+        <startLine>275</startLine>
+        <startColumn>35</startColumn>
+        <endLine>275</endLine>
+        <endColumn>46</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to particleList must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>280</line>
+        <index>10480</index>
+        <endIndex>10491</endIndex>
+        <startLine>280</startLine>
+        <startColumn>34</startColumn>
+        <endLine>280</endLine>
+        <endColumn>45</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to particleList must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>280</line>
+        <index>10501</index>
+        <endIndex>10512</endIndex>
+        <startLine>280</startLine>
+        <startColumn>55</startColumn>
+        <endLine>280</endLine>
+        <endColumn>66</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to particleList must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>280</line>
+        <index>10526</index>
+        <endIndex>10537</endIndex>
+        <startLine>280</startLine>
+        <startColumn>80</startColumn>
+        <endLine>280</endLine>
+        <endColumn>91</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to width must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>280</line>
+        <index>10547</index>
+        <endIndex>10551</endIndex>
+        <startLine>280</startLine>
+        <startColumn>101</startColumn>
+        <endLine>280</endLine>
+        <endColumn>105</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to triangleList must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>281</line>
+        <index>10577</index>
+        <endIndex>10588</endIndex>
+        <startLine>281</startLine>
+        <startColumn>17</startColumn>
+        <endLine>281</endLine>
+        <endColumn>28</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to width must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>278</line>
+        <index>10360</index>
+        <endIndex>10364</endIndex>
+        <startLine>278</startLine>
+        <startColumn>26</startColumn>
+        <endLine>278</endLine>
+        <endColumn>30</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to particleList must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>278</line>
+        <index>10381</index>
+        <endIndex>10392</endIndex>
+        <startLine>278</startLine>
+        <startColumn>47</startColumn>
+        <endLine>278</endLine>
+        <endColumn>58</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to width must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>278</line>
+        <index>10411</index>
+        <endIndex>10415</endIndex>
+        <startLine>278</startLine>
+        <startColumn>77</startColumn>
+        <endLine>278</endLine>
+        <endColumn>81</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to width must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>278</line>
+        <index>10420</index>
+        <endIndex>10424</endIndex>
+        <startLine>278</startLine>
+        <startColumn>86</startColumn>
+        <endLine>278</endLine>
+        <endColumn>90</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to particleList must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>273</line>
+        <index>10228</index>
+        <endIndex>10239</endIndex>
+        <startLine>273</startLine>
+        <startColumn>37</startColumn>
+        <endLine>273</endLine>
+        <endColumn>48</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SingleLineCommentsMustBeginWithSingleSpace" ruleCheckId="SA1005">
+        <context>The comment must start with a single space. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
+        <line>248</line>
+        <index>9224</index>
+        <endIndex>9235</endIndex>
+        <startLine>248</startLine>
+        <startColumn>9</startColumn>
+        <endLine>248</endLine>
+        <endColumn>20</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SingleLineCommentsMustBeginWithSingleSpace" ruleCheckId="SA1005">
+        <context>The comment must start with a single space. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
+        <line>272</line>
+        <index>10177</index>
+        <endIndex>10189</endIndex>
+        <startLine>272</startLine>
+        <startColumn>9</startColumn>
+        <endLine>272</endLine>
+        <endColumn>21</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
+        <context>The method must have a documentation header.</context>
+        <line>287</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ClosingCurlyBracketsMustNotBePrecededByBlankLine" ruleCheckId="SA1508">
+        <context>A closing curly bracket must not be preceded by a blank line.</context>
+        <line>300</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SingleLineCommentsMustBeginWithSingleSpace" ruleCheckId="SA1005">
+        <context>The comment must start with a single space. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
+        <line>291</line>
+        <index>10747</index>
+        <endIndex>10757</endIndex>
+        <startLine>291</startLine>
+        <startColumn>9</startColumn>
+        <endLine>291</endLine>
+        <endColumn>19</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
+        <context>The method must have a documentation header.</context>
+        <line>305</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ClosingCurlyBracketsMustNotBePrecededByBlankLine" ruleCheckId="SA1508">
+        <context>A closing curly bracket must not be preceded by a blank line.</context>
+        <line>318</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.SpacingRules" rule="SingleLineCommentsMustBeginWithSingleSpace" ruleCheckId="SA1005">
+        <context>The comment must start with a single space. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
+        <line>309</line>
+        <index>11083</index>
+        <endIndex>11093</endIndex>
+        <startLine>309</startLine>
+        <startColumn>9</startColumn>
+        <endLine>309</endLine>
+        <endColumn>19</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
+        <context>The method must have a documentation header.</context>
+        <line>323</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to springPrefab must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>325</line>
+        <index>11419</index>
+        <endIndex>11430</endIndex>
+        <startLine>325</startLine>
+        <startColumn>37</startColumn>
+        <endLine>325</endLine>
+        <endColumn>48</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to lineMaterial must begin with the 'this.', 'base.', 'object.' or 'VariableControl.' or 'MonoBehaviour.' prefix to indicate the intended method call. </context>
+        <line>327</line>
+        <index>11593</index>
+        <endIndex>11604</endIndex>
+        <startLine>327</startLine>
+        <startColumn>27</startColumn>
+        <endLine>327</endLine>
+        <endColumn>38</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
+        <context>The method must have a documentation header.</context>
+        <line>332</line>
+        <warning>False</warning>
+      </violation>
+    </violations>
+  </sourcecode>
+</stylecopresultscache>
