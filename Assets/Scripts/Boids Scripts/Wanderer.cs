@@ -66,8 +66,6 @@ public class Wanderer : MonoBehaviour {
     {
         if ((target - position).magnitude <= findingRange)
             return false;
-
-        else
-            return true;
+        return true;
     }
 }

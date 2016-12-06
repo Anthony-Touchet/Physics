@@ -56,8 +56,6 @@ public class BoidController : MonoBehaviour {
             bb.velocity = bb.transform.position.normalized;
             bb.mass = Random.Range(minMass, maxMass);
 
-            bb.transform.parent = transform;
-
             boids.Add(bb);
         }
     }
