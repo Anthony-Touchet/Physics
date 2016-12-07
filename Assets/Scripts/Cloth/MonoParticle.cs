@@ -2,6 +2,6 @@
 
 public class MonoParticle : MonoBehaviour {
 
-    public Particle particle;
-    public bool anchor;
+    public Particle Particle;
+    public bool Anchor;
 }

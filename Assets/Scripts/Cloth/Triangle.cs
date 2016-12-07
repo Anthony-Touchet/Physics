@@ -6,14 +6,14 @@ public class Triangle{
     //formula: (1/2) p |v|^2 Cd a n
     //p and Cd are 1
 
-    Vector3 n;      //Surface Normal
-    Vector3 v;      //Average Velocity
-    float a;        //Area of triangle
+    private Vector3 _n;      //Surface Normal
+    private Vector3 _v;      //Average Velocity
+    private float _a;        //Area of triangle
 
-    public float windCoeficent = 1f;
+    public float WindCoeficent = 1f;
 
-    public Particle p1, p2, p3;     //All the particles.
-    public SpringDamper p1P2, p2P3, p3P1;
+    public Particle P1, P2, P3;     //All the particles.
+    public SpringDamper P1P2, P2P3, P3P1;
 
     public Triangle()
     {
@@ -22,26 +22,26 @@ public class Triangle{
 
     public Triangle(MonoParticle mp1, MonoParticle mp2, MonoParticle mp3)
     {
-        p1 = mp1.particle;
-        p2 = mp2.particle;
-        p3 = mp3.particle;
+        P1 = mp1.Particle;
+        P2 = mp2.Particle;
+        P3 = mp3.Particle;
     }
 
     // Update is called once per frame
     public bool CalculateAeroForce (Vector3 vAir) {
-        Vector3 vSurface = ((p1.velocity + p2.velocity + p3.velocity) / 3);
-        v = vSurface - vAir;
-        n = Vector3.Cross((p2.position - p1.position), (p3.position - p1.position)) / 
-            Vector3.Cross((p2.position - p1.position), (p3.position - p1.position)).magnitude;
-        float ao = (1f / 2f) * Vector3.Cross((p2.position - p1.position), 
-            (p3.position - p1.position)).magnitude;
-        a = ao * (Vector3.Dot(v, n) / v.magnitude);
+        var vSurface = ((P1.Velocity + P2.Velocity + P3.Velocity) / 3);
+        _v = vSurface - vAir;
+        _n = Vector3.Cross((P2.Position - P1.Position), (P3.Position - P1.Position)) / 
+            Vector3.Cross((P2.Position - P1.Position), (P3.Position - P1.Position)).magnitude;
+        float ao = (1f / 2f) * Vector3.Cross((P2.Position - P1.Position), 
+            (P3.Position - P1.Position)).magnitude;
+        _a = ao * (Vector3.Dot(_v, _n) / _v.magnitude);
 
-        Vector3 Faero = -(1f / 2f) * 1f * Mathf.Pow(v.magnitude, 2) * 1f * a * n;
+        var faero = -(1f / 2f) * 1f * Mathf.Pow(_v.magnitude, 2) * 1f * _a * _n;
 
-        p1.AddForce((Faero / 3));
-        p2.AddForce((Faero / 3));
-        p3.AddForce((Faero / 3));
+        P1.AddForce((faero / 3));
+        P2.AddForce((faero / 3));
+        P3.AddForce((faero / 3));
         return true;
     }
 }

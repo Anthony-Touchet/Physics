@@ -1,46 +1,46 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
 
 public class ClothCanvasControl : MonoBehaviour {
 
-    public VariableControl varcontrol;
+    public VariableControl Varcontrol;
 
-    public Slider springConstantSlider;
-    public Slider dampingFactorSlider;
-    public Slider restLengthSlider;
-    public Slider windSlider;
-    public Slider gravitySlider;
-    public Slider breakFactorSlider;
+    public Slider SpringConstantSlider;
+    public Slider DampingFactorSlider;
+    public Slider RestLengthSlider;
+    public Slider WindSlider;
+    public Slider GravitySlider;
+    public Slider BreakFactorSlider;
 
 
     // Use this for initialization
-    void Start () {
-        springConstantSlider.value = varcontrol.springConst;
-        dampingFactorSlider.value = varcontrol.dampingFactor;
-        restLengthSlider.value = varcontrol.restLength;
+    private void Start () {
+        SpringConstantSlider.value = Varcontrol.SpringConst;
+        DampingFactorSlider.value = Varcontrol.DampingFactor;
+        RestLengthSlider.value = Varcontrol.RestLength;
 
-        windSlider.value = varcontrol.windStrength;
+        WindSlider.value = Varcontrol.WindStrength;
 
-        gravitySlider.value = varcontrol.gravity;
-        breakFactorSlider.value = varcontrol.breakFactor;
+        GravitySlider.value = Varcontrol.Gravity;
+        BreakFactorSlider.value = Varcontrol.BreakFactor;
     }
 	
-	// Update is called once per frame
-	void Update () {
-        varcontrol.springConst = springConstantSlider.value;
-        varcontrol.dampingFactor = dampingFactorSlider.value;
-        varcontrol.restLength = restLengthSlider.value;
+    // Update is called once per frame
+    private void Update () {
+        Varcontrol.SpringConst = SpringConstantSlider.value;
+        Varcontrol.DampingFactor = DampingFactorSlider.value;
+        Varcontrol.RestLength = RestLengthSlider.value;
 
-        if (windSlider.value > 0)
+        if (WindSlider.value > 0)
         {
-            varcontrol.wind = true;
-            varcontrol.windStrength = windSlider.value;
+            Varcontrol.Wind = true;
+            Varcontrol.WindStrength = WindSlider.value;
         }
         else
-            varcontrol.wind = false;
+            Varcontrol.Wind = false;
 
-        varcontrol.gravity = gravitySlider.value;
-        varcontrol.breakFactor = breakFactorSlider.value;
+        Varcontrol.Gravity = GravitySlider.value;
+        Varcontrol.BreakFactor = BreakFactorSlider.value;
     }
 }
+
