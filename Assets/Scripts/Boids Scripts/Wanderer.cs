@@ -1,71 +1,73 @@
 ﻿using UnityEngine;
-using System.Collections;
 
-public class Wanderer : MonoBehaviour {
+namespace Assets.Scripts.Boids_Scripts
+{
+    public class Wanderer : MonoBehaviour {
 
-    public float boundries;
-    public float maxSpeed;
-    public float findingRange;
-    public float mass;
+        public float Boundries;
+        public float MaxSpeed;
+        public float FindingRange;
+        public float Mass;
 
-    Vector3 desiredVelocity;
-    Vector3 steering;
-    bool seeking;
-    Vector3 target;
+        private Vector3 _desiredVelocity;
+        private Vector3 _steering;
+        private bool _seeking;
+        private Vector3 _target;
 
-    Vector3 velocity;
+        private Vector3 _velocity;
     
-    [HideInInspector]public Vector3 position;
-	// Use this for initialization
-	void Awake () {
-        position = transform.position;
-        target = GetTarget();
-        seeking = true;
-	}
+        [HideInInspector]public Vector3 Position;
+        // Use this for initialization
+        private void Awake () {
+            Position = transform.position;
+            _target = GetTarget();
+            _seeking = true;
+        }
 	
-	// Update is called once per frame
-	void Update () {
-        if (seeking == true)
-        {
-            desiredVelocity = (target - position).normalized;
-            steering = (desiredVelocity - velocity).normalized;
-            velocity += steering / mass;
+        // Update is called once per frame
+        private void Update () {
+            if (_seeking)
+            {
+                _desiredVelocity = (_target - Position).normalized;
+                _steering = (_desiredVelocity - _velocity).normalized;
+                _velocity += _steering / Mass;
             
-            //Limit Velocity
-            if (velocity.magnitude > maxSpeed)
-                velocity = velocity.normalized * maxSpeed;
+                //Limit Velocity
+                if (_velocity.magnitude > MaxSpeed)
+                    _velocity = _velocity.normalized * MaxSpeed;
 
-            seeking = IsClose();
+                _seeking = IsClose();
 
-            position += velocity;
-            transform.position = position;
+                Position += _velocity;
+                transform.position = Position;
+            }
+
+            else
+            {
+                _target = GetTarget();
+                _seeking = true;
+            }
         }
 
-        else
+        private Vector3 GetTarget()
         {
-            target = GetTarget();
-            seeking = true;
-        }
-    }
+            if(Random.Range(0, 5) == 3)
+            {
+                return FindObjectOfType<BoidController>().transform.position;
+            }
 
-    private Vector3 GetTarget()
-    {
-        if(Random.Range(0, 5) == 3)
+            Vector3 t;
+            t.x = Random.Range(-Boundries, Boundries);
+            t.y = Random.Range(-Boundries, Boundries);
+            t.z = Random.Range(-Boundries, Boundries);
+            return t;
+        }
+
+        private bool IsClose()
         {
-            return FindObjectOfType<BoidController>().transform.position;
+            if ((_target - Position).magnitude <= FindingRange)
+                return false;
+            return true;
         }
-
-        Vector3 t;
-        t.x = Random.Range(-boundries, boundries);
-        t.y = Random.Range(-boundries, boundries);
-        t.z = Random.Range(-boundries, boundries);
-        return t;
-    }
-
-    private bool IsClose()
-    {
-        if ((target - position).magnitude <= findingRange)
-            return false;
-        return true;
     }
 }

@@ -1,16 +1,17 @@
 ﻿using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
 
-public class BoidBehavior : MonoBehaviour {
+namespace Assets.Scripts.Boids_Scripts
+{
+    public class BoidBehavior : MonoBehaviour {
 
-    [HideInInspector]public Vector3 velocity;
+        [HideInInspector]public Vector3 Velocity;
     
-    public float mass;
+        public float Mass;
 
-    void LateUpdate() {                    //Were we will sum up all of the vectors.
+        private void LateUpdate() {                    //Were we will sum up all of the vectors.
 
-        transform.position += velocity;
-        transform.forward = velocity.normalized;
+            transform.position += Velocity;
+            transform.forward = Velocity.normalized;
+        }
     }
 }

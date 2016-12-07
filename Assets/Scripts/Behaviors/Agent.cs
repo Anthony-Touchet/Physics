@@ -56,6 +56,6 @@ public class Agent : IBoid{
 
     public void UpdateVelocity()
     {
-        position += velocity;    //Add velocity to position. Multiply by delta time to make it smooth.
+        position += velocity;    //Add Velocity to Position. Multiply by delta time to make it smooth.
     }
 }
