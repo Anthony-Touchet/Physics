@@ -22,10 +22,10 @@ namespace Assets.Scripts.Boids_Scripts
             if (Input.GetKey(KeyCode.D) && transform.position.x < Range)
                 movement += Vector3.right;
 
-            if (Input.GetKey(KeyCode.PageUp) && transform.position.y < Range)
+            if (Input.GetKey(KeyCode.KeypadPlus) && transform.position.y < Range)
                 movement += Vector3.up;
 
-            if (Input.GetKey(KeyCode.PageDown) && transform.position.y > -Range)
+            if (Input.GetKey(KeyCode.KeypadMinus) && transform.position.y > -Range)
                 movement += Vector3.down;
 
 
