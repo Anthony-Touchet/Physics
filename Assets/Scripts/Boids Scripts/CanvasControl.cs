@@ -36,26 +36,32 @@ namespace Assets.Scripts.Boids_Scripts
             if (Input.GetKeyDown(KeyCode.Alpha1))
             {
                 Cohesion.value = 1f;
-                Dispersion.value = 0.3f;
+                Dispersion.value = 0f;
                 Alignment.value = 0f;
             }
             else if (Input.GetKeyDown(KeyCode.Alpha2))
             {
-                Cohesion.value = 0.5f;
-                Dispersion.value = 0.5f;
-                Alignment.value = 1f;
+                Cohesion.value = 0f;
+                Dispersion.value = 1f;
+                Alignment.value = 0f;
             }
             else if (Input.GetKeyDown(KeyCode.Alpha3))
             {
-                Cohesion.value = 0.25f;
-                Dispersion.value = 0.75f;
-                Alignment.value = 0.5f;
+                Cohesion.value = 1f;
+                Dispersion.value = 1f;
+                Alignment.value = 0f;
             }
             else if (Input.GetKeyDown(KeyCode.Alpha4))
             {
-                Cohesion.value = 0.55f;
-                Dispersion.value = 0.1f;
+                Cohesion.value = 1f;
+                Dispersion.value = 0.2f;
                 Alignment.value = 1f;
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha5))
+            {
+                Cohesion.value = 1f;
+                Dispersion.value = 0.5f;
+                Alignment.value = 0f;
             }
         }
 
